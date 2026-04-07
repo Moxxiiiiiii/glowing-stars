@@ -12,6 +12,8 @@
 [ext_resource type="Script" uid="uid://dbwwjr0o7nwbj" path="res://Scenes/Char-Create/vulpine_chover.gd" id="6_vgbrb"]
 [ext_resource type="Script" uid="uid://b2bb6728scu1x" path="res://Scenes/Char-Create/stature_script_e.gd" id="7_2ttx1"]
 [ext_resource type="Script" uid="uid://7358bdsnyfmf" path="res://Scenes/Char-Create/equine_chover.gd" id="7_sm0n8"]
+[ext_resource type="Script" uid="uid://c1in10hdh58wk" path="res://Scenes/Char-Create/skincolor_script_fhve.gd" id="8_uxmki"]
+[ext_resource type="Script" uid="uid://b7sxvphjt17ia" path="res://Scenes/Char-Create/skincolor_script_s.gd" id="9_wecu7"]
 [ext_resource type="Script" uid="uid://cuo4txg3h5w82" path="res://Scenes/Char-Create/class_variables.gd" id="11_3yepr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sm0n8"]
@@ -125,6 +127,12 @@ script = ExtResource("6_vc7we")
 
 [node name="stature-script-E" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text" index="7" unique_id=1563225192]
 script = ExtResource("7_2ttx1")
+
+[node name="skincolor-script-FHVE" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text" index="8" unique_id=259527182]
+script = ExtResource("8_uxmki")
+
+[node name="skincolor-script-S" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text" index="9" unique_id=1639088648]
+script = ExtResource("9_wecu7")
 
 [node name="choice-grid" parent="Background/MarginContainer/right-side/Choices/decision-box" parent_id_path=PackedInt32Array(1306729758) index="0" unique_id=1025699463]
 unique_name_in_owner = true
@@ -522,6 +530,154 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
 
+[node name="skincolor-gridFHVE" type="GridContainer" parent="Background/MarginContainer/right-side/Choices/decision-box" parent_id_path=PackedInt32Array(1306729758) index="5" unique_id=587196299]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 78
+theme_override_constants/v_separation = 33
+columns = 4
+
+[node name="skincolor1-FHVE" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridFHVE" index="0" unique_id=1813309677]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="skincolor2-FHVE" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridFHVE" index="1" unique_id=1262559624]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="skincolor3-FHVE" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridFHVE" index="2" unique_id=1733253719]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="skincolor4-FHVE" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridFHVE" index="3" unique_id=1489231174]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="skincolor5-FHVE" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridFHVE" index="4" unique_id=1617078593]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="skincolor6-FHVE" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridFHVE" index="5" unique_id=1144828637]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="skincolor7-FHVE" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridFHVE" index="6" unique_id=821157407]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="skincolor8-FHVE" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridFHVE" index="7" unique_id=1633945047]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="skincolor-gridS" type="GridContainer" parent="Background/MarginContainer/right-side/Choices/decision-box" parent_id_path=PackedInt32Array(1306729758) index="6" unique_id=73673680]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 78
+theme_override_constants/v_separation = 33
+columns = 4
+
+[node name="skincolor1-S" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridS" index="0" unique_id=386120938]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="skincolor2-S" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridS" index="1" unique_id=397869726]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="skincolor3-S" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridS" index="2" unique_id=176071619]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="skincolor4-S" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridS" index="3" unique_id=1538533799]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="skincolor5-S" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridS" index="4" unique_id=1255522981]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="skincolor6-S" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridS" index="5" unique_id=1596092558]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="skincolor7-S" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridS" index="6" unique_id=1698836589]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="skincolor8-S" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridS" index="7" unique_id=1136363489]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
 [node name="class-variables" type="Node" parent="." index="1" unique_id=892205861]
 script = ExtResource("11_3yepr")
 
@@ -557,3 +713,13 @@ script = ExtResource("11_3yepr")
 [connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/stature-grid-E/stature1-E" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/stature-script-E" method="_on_stature_1e_pressed"]
 [connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/stature-grid-E/stature2-E" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/stature-script-E" method="_on_stature_2e_pressed"]
 [connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/stature-grid-E/stature3-E" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/stature-script-E" method="_on_stature_3e_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridFHVE/skincolor1-FHVE" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/skincolor-script-FHVE" method="_on_skincolor_1fhve_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridFHVE/skincolor2-FHVE" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/skincolor-script-FHVE" method="_on_skincolor_2fhve_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridFHVE/skincolor3-FHVE" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/skincolor-script-FHVE" method="_on_skincolor_3fhve_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridFHVE/skincolor4-FHVE" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/skincolor-script-FHVE" method="_on_skincolor_4fhve_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridS/skincolor1-S" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/skincolor-script-S" method="_on_skincolor_1s_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridS/skincolor2-S" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/skincolor-script-S" method="_on_skincolor_2s_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridS/skincolor3-S" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/skincolor-script-S" method="_on_skincolor_3s_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridS/skincolor4-S" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/skincolor-script-S" method="_on_skincolor_4s_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridS/skincolor5-S" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/skincolor-script-S" method="_on_skincolor_5s_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/skincolor-gridS/skincolor6-S" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/skincolor-script-S" method="_on_skincolor_6s_pressed"]

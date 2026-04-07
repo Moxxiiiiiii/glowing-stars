@@ -5,3 +5,4 @@ static var playerHeight
 static var playerRace
 static var playerStature
 static var playerName
+static var playerSkinColor

@@ -25,9 +25,50 @@ func gather_stature_E(n):
 		playerStature = "unknownStature"
 		return playerStature
 
+func displaySkinColorChoice() -> void:
+	if playerRace == "Felynx":
+		%"skincolor1-FHVE".text = "Light"
+		%"skincolor2-FHVE".text = "Tanned"
+		%"skincolor3-FHVE".text = "Dark"
+		%"skincolor4-FHVE".text = "Ebony"
+		%"skincolor5-FHVE".text = "Thickset"
+		%"stature-grid-FHV".hide()
+		%"skincolor-gridFHVE".show()
+	elif playerRace == "Human":
+		%"skincolor1-FHVE".text = "Light"
+		%"skincolor2-FHVE".text = "Tanned"
+		%"skincolor3-FHVE".text = "Dark"
+		%"skincolor4-FHVE".text = "Ebony"
+		%"skincolor5-FHVE".text = "Thickset"
+		%"stature-grid-FHV".hide()
+		%"skincolor-gridFHVE".show()
+	elif playerRace == "Vulpine":
+		%"skincolor1-FHVE".text = "Light"
+		%"skincolor2-FHVE".text = "Tanned"
+		%"skincolor3-FHVE".text = "Dark"
+		%"skincolor4-FHVE".text = "Ebony"
+		%"skincolor5-FHVE".text = "Thickset"
+		%"stature-grid-FHV".hide()
+		%"skincolor-gridFHVE".show()
+	elif playerRace == "Slyme":
+		%"skincolor1-S".text = "Green"
+		%"skincolor2-S".text = "Blue"
+		%"skincolor3-S".text = "Red"
+		%"skincolor4-S".text = "Pink"
+		%"skincolor5-S".text = "Yellow"
+		%"skincolor6-S".text = "Orange"
+		%"stature-grid-S".hide()
+		%"skincolor-gridS".show()
+	elif playerRace == "Equine":
+		%"skincolor1-FHVE".text = "Light"
+		%"skincolor2-FHVE".text = "Tanned"
+		%"skincolor3-FHVE".text = "Dark"
+		%"skincolor4-FHVE".text = "Ebony"
+		%"skincolor5-FHVE".text = "Thickset"
+		%"stature-grid-E".hide()
+		%"skincolor-gridFHVE".show()
+
 ## Signals
-
-
 func _on_stature_1e_pressed() -> void:
 	## Gather stature Info
 	gather_stature_E(1)
@@ -43,6 +84,7 @@ func _on_stature_1e_pressed() -> void:
 	%"stature-grid-E".hide()
 	
 	## Prepare and display new elements
+	displaySkinColorChoice()
 
 
 func _on_stature_2e_pressed() -> void:
@@ -60,6 +102,7 @@ func _on_stature_2e_pressed() -> void:
 	%"stature-grid-E".hide()
 	
 	## Prepare and display new elements
+	displaySkinColorChoice()
 
 func _on_stature_3e_pressed() -> void:
 	## Gather stature Info
@@ -76,3 +119,4 @@ func _on_stature_3e_pressed() -> void:
 	%"stature-grid-E".hide()
 	
 	## Prepare and display new elements
+	displaySkinColorChoice()
