@@ -40,6 +40,7 @@ func _on_gender_1_pressed() -> void:
 	%"gender-grid".hide()
 	
 	## Prepare and display new elements
+	display_class()
 
 func _on_gender_2_pressed() -> void:
 	## Gather Gender Info
@@ -50,6 +51,7 @@ func _on_gender_2_pressed() -> void:
 	%"gender-grid".hide()
 	
 	## Prepare and display new elements
+	display_class()
 
 func _on_gender_3_pressed() -> void:
 	## Gather Gender Info
@@ -60,3 +62,4 @@ func _on_gender_3_pressed() -> void:
 	%"gender-grid".hide()
 	
 	## Prepare and display new elements
+	display_class()

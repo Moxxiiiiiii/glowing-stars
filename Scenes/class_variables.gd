@@ -13,3 +13,8 @@ static var playerDickSize
 static var playerChestSize
 static var playerGender
 static var playerClass
+
+## Declare Variables for class attributes
+
+
+## Declare Variables for class Stats

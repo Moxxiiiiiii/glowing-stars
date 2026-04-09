@@ -52,7 +52,7 @@ func _on_hairlength_1_pressed() -> void:
 
 func _on_hairlength_2_pressed() -> void:
 	## Gather Hair Length Info
-	gather_hair_length(1)
+	gather_hair_length(2)
 	print(playerHairLength)
 	
 	## Hide unused elements
@@ -64,7 +64,7 @@ func _on_hairlength_2_pressed() -> void:
 
 func _on_hairlength_3_pressed() -> void:
 	## Gather Hair Length Info
-	gather_hair_length(1)
+	gather_hair_length(3)
 	print(playerHairLength)
 	
 	## Hide unused elements

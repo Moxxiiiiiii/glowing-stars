@@ -30,7 +30,7 @@ func _on_class_1_pressed() -> void:
 
 func _on_class_2_pressed() -> void:
 	## Gather Class Info
-	gather_class(1)
+	gather_class(2)
 	print(playerClass)
 	
 	## Change scene
@@ -39,7 +39,7 @@ func _on_class_2_pressed() -> void:
 
 func _on_class_3_pressed() -> void:
 	## Gather Class Info
-	gather_class(1)
+	gather_class(3)
 	print(playerClass)
 	
 	## Change scene

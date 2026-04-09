@@ -32,11 +32,11 @@ func gather_dick_size_FHVS(n):
 func display_chest_size():
 	%"chestsize-grid".show()
 	%chestsize1.text = "Flat"
-	%chestsize1.text = "A Cup"
-	%chestsize1.text = "B Cup"
-	%chestsize1.text = "C Cup"
-	%chestsize1.text = "D Cup"
-	%chestsize1.text = "E Cup"
+	%chestsize2.text = "A Cup"
+	%chestsize3.text = "B Cup"
+	%chestsize4.text = "C Cup"
+	%chestsize5.text = "D Cup"
+	%chestsize6.text = "E Cup"
 	
 	if playerDickSize == "Vagina":
 		%"context-text".text = "Your cheeks flush as they take note of your quim, tucked right where it belongs.
