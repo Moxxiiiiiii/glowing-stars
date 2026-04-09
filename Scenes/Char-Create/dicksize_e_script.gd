@@ -29,6 +29,22 @@ func gather_dick_size_E(n):
 		playerDickSize = %dicksize6E.text
 		return playerDickSize
 
+func display_chest_size():
+	%"chestsize-grid".show()
+	%chestsize1.text = "Flat"
+	%chestsize1.text = "A Cup"
+	%chestsize1.text = "B Cup"
+	%chestsize1.text = "C Cup"
+	%chestsize1.text = "D Cup"
+	%chestsize1.text = "E Cup"
+	
+	if playerDickSize == "Vagina":
+		%"context-text".text = "Your cheeks flush as they take note of your quim, tucked right where it belongs.
+You shake your head a little trying to clear your lewd thoughts, eyes slowly making their way up to your chest..."
+	else:
+		%"context-text".text = "Your cheeks flush as they take note of your " + playerDickSize + " prick, resting right where it belongs.
+You shake your head a little trying to clear your lewd thoughts, eyes slowly making their way up to your chest..."
+
 ## Signals
 func _on_dicksize_1e_pressed() -> void:
 	## Gather Dick Size Info
@@ -39,6 +55,7 @@ func _on_dicksize_1e_pressed() -> void:
 	%"dicksize-gridE".hide()
 	
 	## Prepare and display new elements
+	display_chest_size()
 
 
 func _on_dicksize_2e_pressed() -> void:
@@ -50,6 +67,7 @@ func _on_dicksize_2e_pressed() -> void:
 	%"dicksize-gridE".hide()
 	
 	## Prepare and display new elements
+	display_chest_size()
 
 
 func _on_dicksize_3e_pressed() -> void:
@@ -61,6 +79,7 @@ func _on_dicksize_3e_pressed() -> void:
 	%"dicksize-gridE".hide()
 	
 	## Prepare and display new elements
+	display_chest_size()
 
 
 func _on_dicksize_4e_pressed() -> void:
@@ -72,6 +91,7 @@ func _on_dicksize_4e_pressed() -> void:
 	%"dicksize-gridE".hide()
 	
 	## Prepare and display new elements
+	display_chest_size()
 
 
 func _on_dicksize_5e_pressed() -> void:
@@ -83,6 +103,7 @@ func _on_dicksize_5e_pressed() -> void:
 	%"dicksize-gridE".hide()
 	
 	## Prepare and display new elements
+	display_chest_size()
 
 
 func _on_dicksize_6e_pressed() -> void:
@@ -94,3 +115,4 @@ func _on_dicksize_6e_pressed() -> void:
 	%"dicksize-gridE".hide()
 	
 	## Prepare and display new elements
+	display_chest_size()

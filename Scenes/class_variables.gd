@@ -12,3 +12,4 @@ static var playerHairLength
 static var playerDickSize
 static var playerChestSize
 static var playerGender
+static var playerClass

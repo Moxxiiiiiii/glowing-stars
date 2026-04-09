@@ -40,14 +40,14 @@ func display_hair_color():
 	if playerRace == "Slyme":
 		playerHairColor = playerSkinColor
 		%"hairlength-grid".show()
-		%"context-text".text = "Your " + playerEyeColor.toLowerCase() + "eyes look lovely in the morning light. 
-		\nIt takes them a while to figure out the colour of your hair... Looking a little closer, you notice that your " + playerHairColor.toLowerCase() + " hair is the same as your transluscent " + playerSkinColor.toLowerCase() + " skin."
+		%"context-text".text = "Your " + playerEyeColor.to_lower() + "eyes look lovely in the morning light. 
+		\nIt takes them a while to figure out the colour of your hair... Looking a little closer, you notice that your " + playerHairColor.to_lower() + " hair is the same as your transluscent " + playerSkinColor.to_lower() + " skin."
 		%hairlength1.text = "Short"
 		%hairlength1.text = "Medium"
 		%hairlength1.text = "Long"
 	else:
 		%"haircolor-grid".show()
-		%"context-text".text = "Your " + playerEyeColor.toLowerCase() + " eyes look lovely in the morning light. 
+		%"context-text".text = "Your " + playerEyeColor.to_lower() + " eyes look lovely in the morning light. 
 		\nIt takes them a while to figure out the colour of your hair..."
 		%haircolor1.text = "Brown"
 		%haircolor2.text = "Black"

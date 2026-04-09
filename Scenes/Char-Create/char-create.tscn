@@ -4,8 +4,11 @@
 [ext_resource type="Script" uid="uid://ctuihkekjs1ga" path="res://Scenes/Char-Create/char-create-functions.gd" id="2_ea161"]
 [ext_resource type="Script" uid="uid://dqcxh1xis5qfi" path="res://Scenes/Char-Create/name_confirm.gd" id="3_77fi1"]
 [ext_resource type="Script" uid="uid://paayy5a4cn5x" path="res://Scenes/Char-Create/felynx_chover.gd" id="3_dm4fs"]
+[ext_resource type="Script" uid="uid://dry4r8m6h0tyq" path="res://Scenes/Char-Create/chestsize_script.gd" id="4_6ndy6"]
+[ext_resource type="Script" uid="uid://bk37x821pjqif" path="res://Scenes/Char-Create/class_script.gd" id="4_bynnx"]
 [ext_resource type="Script" uid="uid://bqg4mk0fxgrtw" path="res://Scenes/Char-Create/height_script.gd" id="4_d0b7a"]
 [ext_resource type="Script" uid="uid://dnfloy4easy0w" path="res://Scenes/Char-Create/human_chover.gd" id="4_dm4fs"]
+[ext_resource type="Script" uid="uid://bw7hwoo7e5dfj" path="res://Scenes/Char-Create/gender_script.gd" id="4_jlwvk"]
 [ext_resource type="Script" uid="uid://bkth655t2k06j" path="res://Scenes/Char-Create/dicksize_e_script.gd" id="4_kircn"]
 [ext_resource type="Script" uid="uid://c18iwt0fvis3h" path="res://Scenes/Char-Create/haircolor_script.gd" id="4_uemx7"]
 [ext_resource type="Script" uid="uid://c2tot5qjnilth" path="res://Scenes/Char-Create/hairlength_script.gd" id="4_vje74"]
@@ -19,7 +22,6 @@
 [ext_resource type="Script" uid="uid://c1in10hdh58wk" path="res://Scenes/Char-Create/skincolor_script_fhve.gd" id="8_uxmki"]
 [ext_resource type="Script" uid="uid://b7sxvphjt17ia" path="res://Scenes/Char-Create/skincolor_script_s.gd" id="9_wecu7"]
 [ext_resource type="Script" uid="uid://csnk3ume6bq1y" path="res://Scenes/Char-Create/eyecolor_script.gd" id="10_wecu7"]
-[ext_resource type="Script" uid="uid://cuo4txg3h5w82" path="res://Scenes/Char-Create/class_variables.gd" id="11_3yepr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sm0n8"]
 bg_color = Color(0.19607843, 0.29803923, 0.34901962, 1)
@@ -86,6 +88,23 @@ corner_radius_bottom_left = 8
 expand_margin_left = 4.0
 expand_margin_top = 4.0
 
+[sub_resource type="GDScript" id="GDScript_6ndy6"]
+script/source = "class_name classVariables extends Node
+
+## Declare variables to reference for character characteristics as class.
+static var playerHeight
+static var playerRace
+static var playerStature
+static var playerName
+static var playerSkinColor
+static var playerEyeColor
+static var playerHairColor
+static var playerHairLength
+static var playerDickSize
+static var playerChestSize
+static var playerGender
+"
+
 [node name="Game" unique_id=1115383842 instance=ExtResource("1_qmw5f")]
 
 [node name="context-text" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box" parent_id_path=PackedInt32Array(227325637) index="0" unique_id=531777206]
@@ -120,26 +139,35 @@ offset_bottom = 442.0
 theme_override_font_sizes/font_size = 26
 script = ExtResource("3_77fi1")
 
-[node name="dicksizeE-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text" index="4" unique_id=1855902437]
+[node name="class-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text" index="4" unique_id=1263577405]
+script = ExtResource("4_bynnx")
+
+[node name="gender-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text" index="5" unique_id=1832494788]
+script = ExtResource("4_jlwvk")
+
+[node name="chestsize-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text" index="6" unique_id=1902836086]
+script = ExtResource("4_6ndy6")
+
+[node name="dicksizeE-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text" index="7" unique_id=1855902437]
 script = ExtResource("4_kircn")
 
-[node name="dicksizeFHVS-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text" index="5" unique_id=313122542]
+[node name="dicksizeFHVS-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script" index="0" unique_id=313122542]
 script = ExtResource("5_6ndy6")
 
-[node name="hairlength-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text" index="6" unique_id=95459031]
+[node name="hairlength-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text" index="8" unique_id=95459031]
 script = ExtResource("4_vje74")
 
-[node name="haircolor-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text" index="7" unique_id=1016799989]
+[node name="haircolor-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text" index="9" unique_id=1016799989]
 script = ExtResource("4_uemx7")
 
-[node name="eyecolor-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text" index="8" unique_id=590675628]
+[node name="eyecolor-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text" index="10" unique_id=590675628]
 script = ExtResource("10_wecu7")
 
-[node name="height-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text" index="9" unique_id=1794551858]
+[node name="height-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text" index="11" unique_id=1794551858]
 unique_name_in_owner = true
 script = ExtResource("4_d0b7a")
 
-[node name="stature-script-FHV" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text" index="10" unique_id=1389740892]
+[node name="stature-script-FHV" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text" index="12" unique_id=1389740892]
 script = ExtResource("5_5blr1")
 
 [node name="stature-script-S" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/stature-script-FHV" index="0" unique_id=2112023532]
@@ -148,7 +176,7 @@ script = ExtResource("6_vc7we")
 [node name="stature-script-E" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/stature-script-FHV" index="1" unique_id=1563225192]
 script = ExtResource("7_2ttx1")
 
-[node name="skincolor-script-S" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text" index="11" unique_id=1639088648]
+[node name="skincolor-script-S" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text" index="13" unique_id=1639088648]
 script = ExtResource("9_wecu7")
 
 [node name="skincolor-script-FHVE" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/skincolor-script-S" index="0" unique_id=259527182]
@@ -1058,8 +1086,218 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
 
+[node name="chestsize-grid" type="GridContainer" parent="Background/MarginContainer/right-side/Choices/decision-box" parent_id_path=PackedInt32Array(1306729758) index="12" unique_id=1189332544]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 78
+theme_override_constants/v_separation = 33
+columns = 4
+
+[node name="chestsize1" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/chestsize-grid" index="0" unique_id=1074097970]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="chestsize2" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/chestsize-grid" index="1" unique_id=366092715]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="chestsize3" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/chestsize-grid" index="2" unique_id=1419810755]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="chestsize4" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/chestsize-grid" index="3" unique_id=1618457105]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="chestsize5" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/chestsize-grid" index="4" unique_id=1424194970]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="chestsize6" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/chestsize-grid" index="5" unique_id=1346177543]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="chestsize7" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/chestsize-grid" index="6" unique_id=211902257]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="chestsize8" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/chestsize-grid" index="7" unique_id=1394084879]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="gender-grid" type="GridContainer" parent="Background/MarginContainer/right-side/Choices/decision-box" parent_id_path=PackedInt32Array(1306729758) index="13" unique_id=1070846161]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 78
+theme_override_constants/v_separation = 33
+columns = 4
+
+[node name="gender1" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/gender-grid" index="0" unique_id=689151178]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="gender2" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/gender-grid" index="1" unique_id=728798743]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="gender3" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/gender-grid" index="2" unique_id=1344956110]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="gender4" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/gender-grid" index="3" unique_id=43757853]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="gender5" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/gender-grid" index="4" unique_id=2063122454]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="gender6" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/gender-grid" index="5" unique_id=1500075763]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="gender7" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/gender-grid" index="6" unique_id=1583359998]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="gender8" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/gender-grid" index="7" unique_id=801038070]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="class-grid" type="GridContainer" parent="Background/MarginContainer/right-side/Choices/decision-box" parent_id_path=PackedInt32Array(1306729758) index="14" unique_id=630053050]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 78
+theme_override_constants/v_separation = 33
+columns = 4
+
+[node name="class1" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/class-grid" index="0" unique_id=1398688919]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="class2" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/class-grid" index="1" unique_id=1963863494]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="class3" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/class-grid" index="2" unique_id=949128614]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="class4" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/class-grid" index="3" unique_id=933461628]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="class5" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/class-grid" index="4" unique_id=1463210781]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="class6" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/class-grid" index="5" unique_id=1234283395]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="class7" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/class-grid" index="6" unique_id=1056257431]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="class8" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/class-grid" index="7" unique_id=393387375]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
 [node name="class-variables" type="Node" parent="." index="1" unique_id=892205861]
-script = ExtResource("11_3yepr")
+script = SubResource("GDScript_6ndy6")
 
 [connection signal="text_submitted" from="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/Name-edit" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/name-confirm" method="_on_nameedit_text_submitted"]
 [connection signal="mouse_entered" from="Background/MarginContainer/right-side/Choices/decision-box/choice-grid/choice1" to="Background/MarginContainer/right-side/Choices/decision-box/choice-grid/choice1/felynx-chover" method="_on_choice_1_mouse_entered"]
@@ -1121,15 +1359,27 @@ script = ExtResource("11_3yepr")
 [connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/hairlength-grid/hairlength1" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/hairlength-script" method="_on_hairlength_1_pressed"]
 [connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/hairlength-grid/hairlength2" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/hairlength-script" method="_on_hairlength_2_pressed"]
 [connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/hairlength-grid/hairlength3" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/hairlength-script" method="_on_hairlength_3_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize1FHVS" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeFHVS-script" method="_on_dicksize_1fhvs_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize2FHVS" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeFHVS-script" method="_on_dicksize_2fhvs_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize3FHVS" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeFHVS-script" method="_on_dicksize_3fhvs_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize4FHVS" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeFHVS-script" method="_on_dicksize_4fhvs_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize5FHVS" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeFHVS-script" method="_on_dicksize_5fhvs_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize6FHVS" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeFHVS-script" method="_on_dicksize_6fhvs_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize1FHVS" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script/dicksizeFHVS-script" method="_on_dicksize_1fhvs_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize2FHVS" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script/dicksizeFHVS-script" method="_on_dicksize_2fhvs_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize3FHVS" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script/dicksizeFHVS-script" method="_on_dicksize_3fhvs_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize4FHVS" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script/dicksizeFHVS-script" method="_on_dicksize_4fhvs_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize5FHVS" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script/dicksizeFHVS-script" method="_on_dicksize_5fhvs_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize6FHVS" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script/dicksizeFHVS-script" method="_on_dicksize_6fhvs_pressed"]
 [connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/dicksize-gridE/dicksize1E" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script" method="_on_dicksize_1e_pressed"]
 [connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/dicksize-gridE/dicksize2E" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script" method="_on_dicksize_2e_pressed"]
 [connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/dicksize-gridE/dicksize3E" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script" method="_on_dicksize_3e_pressed"]
 [connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/dicksize-gridE/dicksize4E" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script" method="_on_dicksize_4e_pressed"]
 [connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/dicksize-gridE/dicksize5E" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script" method="_on_dicksize_5e_pressed"]
 [connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/dicksize-gridE/dicksize6E" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script" method="_on_dicksize_6e_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/chestsize-grid/chestsize1" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/chestsize-script" method="_on_chestsize_1_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/chestsize-grid/chestsize2" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/chestsize-script" method="_on_chestsize_2_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/chestsize-grid/chestsize3" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/chestsize-script" method="_on_chestsize_3_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/chestsize-grid/chestsize4" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/chestsize-script" method="_on_chestsize_4_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/chestsize-grid/chestsize5" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/chestsize-script" method="_on_chestsize_5_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/chestsize-grid/chestsize6" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/chestsize-script" method="_on_chestsize_6_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/gender-grid/gender1" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/gender-script" method="_on_gender_1_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/gender-grid/gender2" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/gender-script" method="_on_gender_2_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/gender-grid/gender3" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/gender-script" method="_on_gender_3_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/class-grid/class1" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/class-script" method="_on_class_1_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/class-grid/class2" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/class-script" method="_on_class_2_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/class-grid/class3" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/class-script" method="_on_class_3_pressed"]

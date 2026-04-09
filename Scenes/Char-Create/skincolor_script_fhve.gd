@@ -39,7 +39,7 @@ func gather_skin_color_FHVE(n):
 
 func display_eye_color():
 	%"eyecolor-grid".show()
-	%"context-text".text = "Your eyes bounce from your " + playerStature.toLowerCase() + " body back to your eyes... What colour were they again?"
+	%"context-text".text = "Your eyes bounce from your " + playerStature.to_lower() + " body back to your eyes... What colour were they again?"
 	%eyecolor1.text = "Brown"
 	%eyecolor2.text = "Blue"
 	%eyecolor3.text = "Gold"

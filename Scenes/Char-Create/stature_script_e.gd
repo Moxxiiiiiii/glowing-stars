@@ -70,7 +70,7 @@ func displaySkinColorChoice() -> void:
 		%"skincolor4-FHVE".text = "Ebony"
 		%"skincolor5-FHVE".text = "Thickset"
 		%"stature-grid-E".hide()
-		%"context-text".text = "After letting your eyes take note of your " + playerStature.toLowerCase() + " figure, \ntaking note of your skin too..."
+		%"context-text".text = "After letting your eyes take note of your " + playerStature.to_lower() + " figure, \ntaking note of your skin too..."
 		%"skincolor-gridFHVE".show()
 
 ## Signals
