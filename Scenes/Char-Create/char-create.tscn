@@ -89,10 +89,6 @@ corner_radius_bottom_left = 8
 expand_margin_left = 4.0
 expand_margin_top = 4.0
 
-[sub_resource type="GDScript" id="GDScript_6ndy6"]
-script/source = "extends Node
-"
-
 [node name="Game" unique_id=1115383842 instance=ExtResource("1_qmw5f")]
 
 [node name="context-text" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box" parent_id_path=PackedInt32Array(227325637) index="0" unique_id=531777206]
@@ -1422,9 +1418,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
-
-[node name="class-variables" type="Node" parent="." index="1" unique_id=892205861]
-script = SubResource("GDScript_6ndy6")
 
 [connection signal="text_submitted" from="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/Name-edit" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/context-text/name-confirm" method="_on_nameedit_text_submitted"]
 [connection signal="mouse_entered" from="Background/MarginContainer/right-side/Choices/decision-box/choice-grid/choice1" to="Background/MarginContainer/right-side/Choices/decision-box/choice-grid/choice1/felynx-chover" method="_on_choice_1_mouse_entered"]

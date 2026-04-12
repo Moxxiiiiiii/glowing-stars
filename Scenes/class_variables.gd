@@ -14,14 +14,20 @@ extends Node
 @onready var playerGender = "default"
 @onready var playerClass = "default"
 
-## Declare Variables for class attributes
-@onready var playerExperience = "default"
-@onready var playerHealth = "default"
-@onready var playerShield = "default"
-@onready var playerLust = "default"
-@onready var playerCredits = "default"
+## Declare Variables for class stats
+@onready var playerExperience = 0
+@onready var playerHealthCurrent = 20
+@onready var playerHealthMax = 20
+@onready var playerShieldCurrent = 0
+@onready var playerShieldMax = 0
+@onready var playerLustCurrent = 0
+@onready var playerLustMax = 100
+@onready var playerCredits = 0
 
-## Declare Variables for class Stats
-@onready var playerStrength = "default"
-@onready var playerIntelligence = "default"
-@onready var playerCharisma = "default"
+## Declare Variables for class attributes
+@onready var playerStrength = 4
+@onready var playerIntelligence = 4
+@onready var playerCharisma = 4
+@onready var playerAgility = 4
+
+## Declare Date and Time

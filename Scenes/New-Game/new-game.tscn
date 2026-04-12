@@ -8,5 +8,14 @@
 [node name="Game" unique_id=1115383842 instance=ExtResource("1_bnxtq")]
 script = SubResource("GDScript_bnxtq")
 
+[node name="context-text" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box" parent_id_path=PackedInt32Array(227325637) index="0" unique_id=531777206]
+text = "The year is 12,084 of the 4E and the denizens of Earth have long since set their sites on the stars above, although they have found that they're not the only beings out there trying to establish themselves in this incredibly large galaxy. This is a world filled with excitement, danger, love, lust and incredible opportunities to carve your name out into the stars above. But where do you fit in all this exactly?
+
+You have been taken in by a loving guardian who rescued you after your homeworld fell to a slaver attack! You now find yourself back on Earth, starting life anew under the household of a wonderfully bubbly Slyme girl.
+
+Should you choose to accept this new life of yours to explore the world and stars beyond, all you need to do is navigate using the menu below! "
+
 [node name="choice1" parent="Background/MarginContainer/right-side/Choices/decision-box/choice-grid" parent_id_path=PackedInt32Array(1025699463) index="0" unique_id=1702335498]
 script = ExtResource("2_2iqfd")
+
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/choice-grid/choice1" to="Background/MarginContainer/right-side/Choices/decision-box/choice-grid/choice1" method="_on_pressed"]

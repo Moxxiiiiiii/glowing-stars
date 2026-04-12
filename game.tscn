@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://lju8rbqgrtpf"]
 
+[ext_resource type="Script" uid="uid://d2ivr5n07vxj5" path="res://hsl_organise.gd" id="1_80nbo"]
+
 [sub_resource type="GDScript" id="GDScript_80nbo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwb40"]
@@ -28,6 +30,10 @@ corner_radius_bottom_left = 6
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jktm"]
 bg_color = Color(0.30807704, 0.59817183, 0.7549823, 1)
+
+[sub_resource type="GDScript" id="GDScript_mwb40"]
+script/source = "extends Node
+"
 
 [node name="Game" type="Control" unique_id=1115383842]
 layout_mode = 3
@@ -80,13 +86,12 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_fc0e3")
 
 [node name="stat-grid" type="GridContainer" parent="Background/MarginContainer/left-side/Stats and Info/stat-block" unique_id=1915130410]
 layout_mode = 2
-theme_override_constants/v_separation = 94
 
 [node name="date-time-block" type="Panel" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid" unique_id=1852334067]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 2
+size_flags_vertical = 3
 
 [node name="date-time-grid" type="GridContainer" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/date-time-block" unique_id=1523498126]
 layout_mode = 1
@@ -115,85 +120,141 @@ text = "Time: 00:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="experience" type="Panel" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid" unique_id=495768608]
-custom_minimum_size = Vector2(0, 60)
+[node name="stat-panel" type="Panel" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid" unique_id=495768608]
+custom_minimum_size = Vector2(0, 600)
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 2
+size_flags_vertical = 3
 
-[node name="experience-text" type="RichTextLabel" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/experience" unique_id=987947477]
+[node name="stat-container" type="VBoxContainer" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel" unique_id=1548636497]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 22
-text = "Experience: 0 / 0"
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_constants/separation = 4
 
-[node name="shields" type="Panel" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid" unique_id=2049712034]
-custom_minimum_size = Vector2(0, 60)
+[node name="Panel2" type="Panel" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container" unique_id=1871277871]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 2
+size_flags_vertical = 3
 
-[node name="shields-text" type="RichTextLabel" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/shields" unique_id=394789375]
+[node name="hsl-organise" type="VBoxContainer" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2" unique_id=2048061792]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 22
-text = "Shields: 0 / 0"
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_constants/separation = 25
+script = ExtResource("1_80nbo")
 
-[node name="health" type="Panel" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid" unique_id=207929996]
-custom_minimum_size = Vector2(0, 60)
+[node name="vital-title" type="Label" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2/hsl-organise" unique_id=1207712666]
+unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Vital Stats"
+horizontal_alignment = 1
 
-[node name="Date" type="RichTextLabel" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/health" unique_id=2124933893]
+[node name="health-text" type="Label" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2/hsl-organise" unique_id=1761830370]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Health: min / max "
+horizontal_alignment = 1
+
+[node name="shield-text" type="Label" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2/hsl-organise" unique_id=1532206359]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Shields: min / max"
+horizontal_alignment = 1
+
+[node name="lust-text" type="Label" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2/hsl-organise" unique_id=997086038]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Lust: min / max"
+horizontal_alignment = 1
+
+[node name="attribute-box" type="Panel" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container" unique_id=104589860]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.02
+
+[node name="attribute-organise" type="VBoxContainer" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box" unique_id=1262904981]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 22
-text = "Health: 0 / 0"
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_constants/separation = 11
 
-[node name="lust" type="Panel" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid" unique_id=363484025]
-custom_minimum_size = Vector2(0, 60)
+[node name="attributes-title" type="Label" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=1427200986]
+unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Attributes"
+horizontal_alignment = 1
 
-[node name="Date" type="RichTextLabel" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/lust" unique_id=1171897443]
+[node name="strength-text" type="Label" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=811438313]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Strength: str"
+horizontal_alignment = 1
+
+[node name="intelligence-text" type="Label" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=1741619428]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Intelligence: int"
+horizontal_alignment = 1
+
+[node name="charisma-text" type="Label" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=2040215062]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Charisma: chr"
+horizontal_alignment = 1
+
+[node name="agility-text" type="Label" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=507350312]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Agility: agi"
+horizontal_alignment = 1
+
+[node name="inventory-box" type="Panel" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container" unique_id=370480325]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.56
+
+[node name="inventory-organise" type="VBoxContainer" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box" unique_id=1893976711]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 22
-text = "Lust: 0 / 100"
+theme_override_constants/separation = 18
+
+[node name="Control" type="Control" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise" unique_id=583595816]
+layout_mode = 2
+
+[node name="credits-text" type="Label" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise" unique_id=1670548803]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Credits: cred"
 horizontal_alignment = 1
-vertical_alignment = 1
+
+[node name="inventory-button" type="Button" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise" unique_id=908377028]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Inventory"
 
 [node name="Save & Load" type="PanelContainer" parent="Background/MarginContainer/left-side" unique_id=1541108757]
 custom_minimum_size = Vector2(0, 100)
@@ -377,4 +438,5 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
 
-[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/choice-grid/choice1" to="Background/MarginContainer/right-side/Choices/decision-box/choice-grid/choice1" method="_on_pressed"]
+[node name="class-variables" type="Node" parent="." unique_id=250365118]
+script = SubResource("GDScript_mwb40")
