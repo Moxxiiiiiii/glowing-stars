@@ -146,11 +146,6 @@ func _on_confirm_1_pressed() -> void:
 	agility_assign()
 	get_tree().change_scene_to_file("res://Scenes/Wyrld-Home/Wyrld-Home-Intro/Wyrld-Home-Intro.tscn")
 	
-	if ClassVariables.playerRace == "Felynx":
-		if ClassVariables.playerDickSize == "Vagina":
-			%"context-text".text = "You run your fingers through your " + ClassVariables.playerHairLength + " " + ClassVariables.playerHairColor + " hair and past your fuzzy ears, " + ClassVariables.playerHairColor + " tail swishing just behind you in your reflection as you stare into your narrow pupils in the mirror. Your slitted eyes are a lovely shade of " + ClassVariables.playerEyeColor + " and you admire your " + ClassVariables.playerStature + " figure briefly - eyes particularly trailing over your quim. Your " + ClassVariables.playerChestSize + " chest suits nicely, accomodating the rest of your figure."	
-		else:
-			%"context-text".text = "You run your fingers through your " + ClassVariables.playerHairLength + " " + ClassVariables.playerHairColor + " hair and past your fuzzy ears, " + ClassVariables.playerHairColor + " tail swishing just behind you in your reflection as you stare into your narrow pupils in the mirror. Your slitted eyes are a lovely shade of " + ClassVariables.playerEyeColor + " and you admire your " + ClassVariables.playerStature + " figure briefly - eyes particularly trailing over your " + ClassVariables.playerDickSize + "cock.  Your " + ClassVariables.playerChestSize + " chest suits nicely, accomodating the rest of your figure."	
 
 func _on_confirm_2_pressed() -> void:
 	## Restart Scene

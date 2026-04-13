@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bjook310bfvjk"]
 
-[ext_resource type="PackedScene" uid="uid://lju8rbqgrtpf" path="res://game.tscn" id="1_qmw5f"]
+[ext_resource type="PackedScene" uid="uid://lju8rbqgrtpf" path="res://design-documents/game-backup.tscn" id="1_qmw5f"]
 [ext_resource type="Script" uid="uid://ctuihkekjs1ga" path="res://Scenes/Char-Create/char-create-functions.gd" id="2_ea161"]
 [ext_resource type="Script" uid="uid://dqcxh1xis5qfi" path="res://Scenes/Char-Create/name_confirm.gd" id="3_77fi1"]
 [ext_resource type="Script" uid="uid://paayy5a4cn5x" path="res://Scenes/Char-Create/felynx_chover.gd" id="3_dm4fs"]

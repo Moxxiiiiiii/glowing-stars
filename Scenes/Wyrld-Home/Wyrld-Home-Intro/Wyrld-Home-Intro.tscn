@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://bs4q0r3m1615v"]
 
-[ext_resource type="PackedScene" uid="uid://lju8rbqgrtpf" path="res://game.tscn" id="1_7iy3n"]
-[ext_resource type="Script" uid="uid://c04q85n5ghxl7" path="res://Scenes/Wyrld-Home/Wyrld-Home-Intro/context_text.gd" id="2_se0n0"]
+[ext_resource type="PackedScene" uid="uid://lju8rbqgrtpf" path="res://design-documents/game-backup.tscn" id="1_7iy3n"]
+[ext_resource type="Script" uid="uid://c04q85n5ghxl7" path="res://Scenes/Wyrld-Home/Wyrld-Home-Intro/wyrld-context-ready.gd" id="2_se0n0"]
 
 [node name="Game" unique_id=1115383842 instance=ExtResource("1_7iy3n")]
 
 [node name="context-text" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box" parent_id_path=PackedInt32Array(227325637) index="0" unique_id=531777206]
+visible = false
 text = ""
 script = ExtResource("2_se0n0")
 

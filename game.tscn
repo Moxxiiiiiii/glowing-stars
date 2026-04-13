@@ -1,6 +1,11 @@
-[gd_scene format=3 uid="uid://lju8rbqgrtpf"]
+[gd_scene format=3 uid="uid://c6x1aoeyeeuxq"]
 
 [ext_resource type="Script" uid="uid://d2ivr5n07vxj5" path="res://hsl_organise.gd" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://32mk2mjrny0v" path="res://inventory_button.gd" id="2_e2o6t"]
+[ext_resource type="Script" uid="uid://ir7rbh6g8frk" path="res://Scenes/Inventory/equipment_text.gd" id="3_7jktm"]
+[ext_resource type="Script" uid="uid://dhbldhv6juvq6" path="res://Scenes/Inventory/inv_hsl_organise.gd" id="3_ryrav"]
+[ext_resource type="Script" uid="uid://ccq7wwh47c3dy" path="res://Scenes/Inventory/equipment_stats_text.gd" id="4_ryrav"]
+[ext_resource type="Script" uid="uid://48jw3d776l6u" path="res://Scenes/Inventory/all_items.gd" id="5_eow3j"]
 
 [sub_resource type="GDScript" id="GDScript_80nbo"]
 
@@ -31,6 +36,38 @@ corner_radius_bottom_left = 6
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jktm"]
 bg_color = Color(0.30807704, 0.59817183, 0.7549823, 1)
 
+[sub_resource type="GDScript" id="GDScript_j5wjh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vef74"]
+bg_color = Color(0.036378834, 0.29938552, 0.3831717, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hve3p"]
+bg_color = Color(1.92523e-06, 0.5406126, 0.63022685, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfdv2"]
+bg_color = Color(0.11349284, 0.105085455, 0.107226364, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iotsf"]
+bg_color = Color(0.3562991, 0.59489346, 0.72295207, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lc2xo"]
+bg_color = Color(0.34301907, 0.59691554, 0.72678554, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_215e1"]
+bg_color = Color(0.30807704, 0.59817183, 0.7549823, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lfv3a"]
+bg_color = Color(0.4769836, 0.7670783, 0.8856455, 1)
+
 [sub_resource type="GDScript" id="GDScript_mwb40"]
 script/source = "extends Node
 "
@@ -45,6 +82,7 @@ grow_vertical = 2
 script = SubResource("GDScript_80nbo")
 
 [node name="Background" type="PanelContainer" parent="." unique_id=891389138]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -255,6 +293,7 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Inventory"
+script = ExtResource("2_e2o6t")
 
 [node name="Save & Load" type="PanelContainer" parent="Background/MarginContainer/left-side" unique_id=1541108757]
 custom_minimum_size = Vector2(0, 100)
@@ -438,5 +477,464 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
 
+[node name="Inventory" type="Panel" parent="." unique_id=1664302002]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_j5wjh")
+
+[node name="Background" type="PanelContainer" parent="Inventory" unique_id=771844647]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vef74")
+metadata/panel = Color(0.87070334, 0.64264154, 0.7187438, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Inventory/Background" unique_id=743566808]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="left-side" type="VBoxContainer" parent="Inventory/Background/MarginContainer" unique_id=646717391]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Stats and Info" type="PanelContainer" parent="Inventory/Background/MarginContainer/left-side" unique_id=933721768]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_hve3p")
+
+[node name="player-icon" type="Panel" parent="Inventory/Background/MarginContainer/left-side/Stats and Info" unique_id=1164189848]
+custom_minimum_size = Vector2(0, 225)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mfdv2")
+
+[node name="stat-block" type="PanelContainer" parent="Inventory/Background/MarginContainer/left-side/Stats and Info" unique_id=1825549492]
+custom_minimum_size = Vector2(0, 680)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_iotsf")
+
+[node name="stat-grid" type="GridContainer" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block" unique_id=1019456109]
+layout_mode = 2
+
+[node name="date-time-block" type="Panel" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid" unique_id=82738067]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="date-time-grid" type="GridContainer" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/date-time-block" unique_id=918193890]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="inv-date-text" type="RichTextLabel" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/date-time-block/date-time-grid" unique_id=1583534058]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 22
+text = "Date: xx/xx/xx"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="inv-time-text" type="RichTextLabel" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/date-time-block/date-time-grid" unique_id=79231003]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 22
+text = "Time: 00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="stat-panel" type="Panel" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid" unique_id=596694031]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="stat-container" type="VBoxContainer" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel" unique_id=1019433692]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 4
+
+[node name="Panel2" type="Panel" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container" unique_id=1473297677]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="inv-hsl-organise" type="VBoxContainer" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2" unique_id=1251259241]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+script = ExtResource("3_ryrav")
+
+[node name="inv-vital-title" type="Label" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2/inv-hsl-organise" unique_id=484977917]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Vital Stats"
+horizontal_alignment = 1
+
+[node name="inv-health-text" type="Label" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2/inv-hsl-organise" unique_id=1196030219]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Health: min / max "
+horizontal_alignment = 1
+
+[node name="inv-shield-text" type="Label" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2/inv-hsl-organise" unique_id=493539183]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Shields: min / max"
+horizontal_alignment = 1
+
+[node name="inv-lust-text" type="Label" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2/inv-hsl-organise" unique_id=1076952617]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Lust: min / max"
+horizontal_alignment = 1
+
+[node name="attribute-box" type="Panel" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container" unique_id=1826323564]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.02
+
+[node name="attribute-organise" type="VBoxContainer" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box" unique_id=2114455253]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 11
+
+[node name="inv-attributes-title" type="Label" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=891743680]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Attributes"
+horizontal_alignment = 1
+
+[node name="inv-strength-text" type="Label" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=881333827]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Strength: str"
+horizontal_alignment = 1
+
+[node name="inv-intelligence-text" type="Label" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=741714503]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Intelligence: int"
+horizontal_alignment = 1
+
+[node name="inv-charisma-text" type="Label" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=963305206]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Charisma: chr"
+horizontal_alignment = 1
+
+[node name="inv-agility-text" type="Label" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=680026749]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Agility: agi"
+horizontal_alignment = 1
+
+[node name="inventory-box" type="Panel" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container" unique_id=1419575682]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.56
+
+[node name="inventory-organise" type="VBoxContainer" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box" unique_id=2012629187]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+
+[node name="Control" type="Control" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise" unique_id=1704293371]
+layout_mode = 2
+
+[node name="inv-credits-text" type="Label" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise" unique_id=2018036122]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Credits: cred"
+horizontal_alignment = 1
+
+[node name="inventory-button" type="Button" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise" unique_id=1598773287]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Inventory"
+script = ExtResource("2_e2o6t")
+
+[node name="Save & Load" type="PanelContainer" parent="Inventory/Background/MarginContainer/left-side" unique_id=1211031275]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.13
+theme_override_styles/panel = SubResource("StyleBoxFlat_lc2xo")
+
+[node name="save-grid" type="GridContainer" parent="Inventory/Background/MarginContainer/left-side/Save & Load" unique_id=2124225254]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 13
+theme_override_constants/v_separation = 4
+columns = 2
+
+[node name="save-box" type="Panel" parent="Inventory/Background/MarginContainer/left-side/Save & Load/save-grid" unique_id=1539763028]
+custom_minimum_size = Vector2(156, 68)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="save-text" type="RichTextLabel" parent="Inventory/Background/MarginContainer/left-side/Save & Load/save-grid/save-box" unique_id=1044050083]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -25.0
+offset_right = 59.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 30
+text = "Save"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="load-box" type="Panel" parent="Inventory/Background/MarginContainer/left-side/Save & Load/save-grid" unique_id=1803936972]
+custom_minimum_size = Vector2(156, 68)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="load-text" type="RichTextLabel" parent="Inventory/Background/MarginContainer/left-side/Save & Load/save-grid/load-box" unique_id=1088333154]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -25.0
+offset_right = 59.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 30
+text = "Load"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="right-side" type="VBoxContainer" parent="Inventory/Background/MarginContainer" unique_id=879021825]
+custom_minimum_size = Vector2(1500, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+alignment = 2
+
+[node name="Game info" type="PanelContainer" parent="Inventory/Background/MarginContainer/right-side" unique_id=964998735]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_hve3p")
+
+[node name="MarginContainer" type="MarginContainer" parent="Inventory/Background/MarginContainer/right-side/Game info" unique_id=1926546202]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="context-box" type="Panel" parent="Inventory/Background/MarginContainer/right-side/Game info/MarginContainer" unique_id=69508074]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_215e1")
+
+[node name="inventory-main" type="HBoxContainer" parent="Inventory/Background/MarginContainer/right-side/Game info/MarginContainer/context-box" unique_id=500158538]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="inventory-left" type="GridContainer" parent="Inventory/Background/MarginContainer/right-side/Game info/MarginContainer/context-box/inventory-main" unique_id=1430977319]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="equipment-text" type="RichTextLabel" parent="Inventory/Background/MarginContainer/right-side/Game info/MarginContainer/context-box/inventory-main/inventory-left" unique_id=1967172178]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfv3a")
+script = ExtResource("3_7jktm")
+
+[node name="equipment-stats-text" type="RichTextLabel" parent="Inventory/Background/MarginContainer/right-side/Game info/MarginContainer/context-box/inventory-main/inventory-left" unique_id=1811773791]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfv3a")
+script = ExtResource("4_ryrav")
+
+[node name="inventory-right" type="GridContainer" parent="Inventory/Background/MarginContainer/right-side/Game info/MarginContainer/context-box/inventory-main" unique_id=578708385]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="all-items" type="RichTextLabel" parent="Inventory/Background/MarginContainer/right-side/Game info/MarginContainer/context-box/inventory-main/inventory-right" unique_id=252888748]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfv3a")
+bbcode_enabled = true
+script = ExtResource("5_eow3j")
+
+[node name="context-text" type="RichTextLabel" parent="Inventory/Background/MarginContainer/right-side/Game info/MarginContainer/context-box" unique_id=595811797]
+visible = false
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 1476.0
+offset_bottom = 781.0
+theme_override_font_sizes/normal_font_size = 24
+text = "Welcome to Tarin!
+
+Tarin is a world set far further into the future than our own. It's a world filled with excitement, danger, love, lust and more! To begin your journey, all you need to do is use the menu below. "
+
+[node name="Choices" type="PanelContainer" parent="Inventory/Background/MarginContainer/right-side" unique_id=1351525129]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.13
+theme_override_styles/panel = SubResource("StyleBoxFlat_lc2xo")
+
+[node name="decision-box" type="MarginContainer" parent="Inventory/Background/MarginContainer/right-side/Choices" unique_id=857840523]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="choice-grid" type="GridContainer" parent="Inventory/Background/MarginContainer/right-side/Choices/decision-box" unique_id=1412144041]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 78
+theme_override_constants/v_separation = 33
+columns = 4
+
+[node name="choice1" type="Button" parent="Inventory/Background/MarginContainer/right-side/Choices/decision-box/choice-grid" unique_id=722387077]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Equip"
+
+[node name="choice1-alt" type="Button" parent="Inventory/Background/MarginContainer/right-side/Choices/decision-box/choice-grid" unique_id=1381792905]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Unequip"
+
+[node name="choice2" type="Button" parent="Inventory/Background/MarginContainer/right-side/Choices/decision-box/choice-grid" unique_id=1889190759]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="choice3" type="Button" parent="Inventory/Background/MarginContainer/right-side/Choices/decision-box/choice-grid" unique_id=1771809029]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="choice4" type="Button" parent="Inventory/Background/MarginContainer/right-side/Choices/decision-box/choice-grid" unique_id=55958114]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="choice5" type="Button" parent="Inventory/Background/MarginContainer/right-side/Choices/decision-box/choice-grid" unique_id=1756003314]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="choice6" type="Button" parent="Inventory/Background/MarginContainer/right-side/Choices/decision-box/choice-grid" unique_id=441756650]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="choice7" type="Button" parent="Inventory/Background/MarginContainer/right-side/Choices/decision-box/choice-grid" unique_id=913922391]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="choice8" type="Button" parent="Inventory/Background/MarginContainer/right-side/Choices/decision-box/choice-grid" unique_id=1274791849]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Character"
+
 [node name="class-variables" type="Node" parent="." unique_id=250365118]
 script = SubResource("GDScript_mwb40")
+
+[connection signal="pressed" from="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise/inventory-button" to="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise/inventory-button" method="_on_pressed"]
+[connection signal="pressed" from="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise/inventory-button" to="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise/inventory-button" method="_on_pressed"]

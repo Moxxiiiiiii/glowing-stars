@@ -1,0 +1,12 @@
+extends RichTextLabel
+@onready var equipment_stats_text: RichTextLabel = %"equipment-stats-text"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	%"equipment-stats-text".append_text("[center][color=#93edb1][outline_color=#000000][outline_size=4][font_size=48]Equipment Stats[/font_size][/outline_size][/outline_color][/color][/center]")
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass

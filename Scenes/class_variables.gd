@@ -14,7 +14,7 @@ extends Node
 @onready var playerGender = "default"
 @onready var playerClass = "default"
 
-## Declare Variables for class stats
+## Declare Variables for Class Stats
 @onready var playerExperience = 0
 @onready var playerHealthCurrent = 20
 @onready var playerHealthMax = 20
@@ -24,10 +24,20 @@ extends Node
 @onready var playerLustMax = 100
 @onready var playerCredits = 0
 
-## Declare Variables for class attributes
+## Declare Variables for Class attributes
 @onready var playerStrength = 4
 @onready var playerIntelligence = 4
 @onready var playerCharisma = 4
 @onready var playerAgility = 4
 
 ## Declare Date and Time
+
+## Declare Player Inventory
+@onready var playerHead = "Nothing"
+@onready var playerBody = "Nothing"
+@onready var playerLegs = "Nothing"
+@onready var playerFeet = "Nothing"
+@onready var playerShield = "Nothing"
+@onready var playerWeapon = "Nothing"
+
+## Declare Player Gear

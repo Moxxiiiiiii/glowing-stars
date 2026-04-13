@@ -1,4 +1,5 @@
 extends VBoxContainer
+## Declare for main panels
 @onready var vital_title: Label = %"vital-title"
 @onready var health_text: Label = %"health-text"
 @onready var shield_text: Label = %"shield-text"
