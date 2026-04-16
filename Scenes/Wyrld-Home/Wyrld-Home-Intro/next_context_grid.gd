@@ -6,7 +6,7 @@ extends Node
 
 ## Define Functions for Signals
 func display_next_intro_block():
-	var storyvar1 = "You follow Wyrld along into the kitchen, immediately the smell of her home cooking hits your nose. It’s fresh, and the scent of smoke cured meat wafts throughout the kitchen, and attached dining room. You take a seat at the table, it’s made of some priceless wood that would sell for more than your previous home was worth. Likely a family heirloom, but everything here was nicer than it was used to. A benefit of being stuck on a core planet rather than some backwater hub, you figure. With the sound of light footsteps coming from the down the hall – it’s Wylatt – right on schedule. He’s tall, with an hourglass sillouhette – looking like a model right out of the holo-tapes you grew up with. He’s not a Slyme like his mother, but he shares the same vibrant oceanic blue eyes. He’s a human, with pale skin and short blonde hair as opposed to his mothers long, deep blue ‘hair’.
+	var storyvar1 = "After dressing, you head out of your room and follow Wyrld along into the kitchen, immediately the smell of her home cooking hits your nose. It’s fresh, and the scent of smoke cured meat wafts throughout the kitchen, and attached dining room. You take a seat at the table, it’s made of some priceless wood that would sell for more than your previous home was worth. Likely a family heirloom, but everything here was nicer than it was used to. A benefit of being stuck on a core planet rather than some backwater hub, you figure. With the sound of light footsteps coming from the down the hall – it’s Wylatt – right on schedule. He’s tall, with an hourglass sillouhette – looking like a model right out of the holo-tapes you grew up with. He’s not a Slyme like his mother, but he shares the same vibrant oceanic blue eyes. He’s a human, with pale skin and short blonde hair as opposed to his mothers long, deep blue ‘hair’.
 	
 “Mornin’ {playerName}, hopefully you slept a little better last night.” He smiles, taking a seat down next to you. Despite his gorgeous looks, his personality is far from uptight – always taking a deep concern for your wellbeing. 
 
@@ -22,6 +22,12 @@ The smell and sights, let alone the taste of the food is divine enough to make y
 	var storyvar2 = storyvar1.replace("{playerName}", ClassVariables.playerName)
 	%"context-text".text = storyvar2
 
+func update_clothes():
+	ClassVariables.playerBody = "Comfortable Shirt"
+	ClassVariables.playerLegs = "Comfortable Jeans"
+	ClassVariables.playerFeet = "Comfortable Sneakers"
+	return ClassVariables.playerBody
+
 ## Signals
 func _on_choice_1_pressed() -> void:
 	## Hide Previous Elements
@@ -31,3 +37,6 @@ func _on_choice_1_pressed() -> void:
 	## Show New Ones
 	%"intro-grid-2".show()
 	display_next_intro_block()
+	
+	## Update Clothes
+	update_clothes()

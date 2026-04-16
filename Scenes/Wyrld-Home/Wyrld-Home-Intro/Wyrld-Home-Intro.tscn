@@ -821,6 +821,75 @@ size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
 text = "Done"
 
+[node name="end-grid" type="GridContainer" parent="Background/MarginContainer/right-side/Choices/decision-box" unique_id=1708091595]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 78
+theme_override_constants/v_separation = 33
+columns = 4
+
+[node name="end1" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/end-grid" unique_id=1091546916]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Next
+"
+
+[node name="end2" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/end-grid" unique_id=1494924431]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="end3" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/end-grid" unique_id=1727717508]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="end4" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/end-grid" unique_id=1162463614]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="end5" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/end-grid" unique_id=1400864093]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="end6" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/end-grid" unique_id=335107559]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="end7" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/end-grid" unique_id=832102870]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="end8" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/end-grid" unique_id=837383729]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
 [node name="class-variables" type="Node" parent="." unique_id=250365118]
 script = SubResource("GDScript_mwb40")
 

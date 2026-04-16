@@ -15,7 +15,11 @@ Taking a step out of the shower, and toweling yourself off – you wrap the damp
 
 You say remark that you’re not really her child, but thank her for her affection anyway – eventually breaking apart when she let’s you free.
 
-“C’mon over to the kitchen playerName, breakfast is just about ready and Wylatt will be here soon.” She saunters off cheerfully down the hall and towards the kitchen, giving you a good look at her sweet bubbly figure – a signature trait of many Slyme’s like her. Still, it’s no less pleasing to see her and her apron adorning her rather professional looking body-suit. Despite being such a homely and loving mother figure for the house, she’s a busy girl responsible for running her own shop in town."
+“C’mon over to the kitchen playerName, breakfast is just about ready and Wylatt will be here soon.” She saunters off cheerfully down the hall and towards the kitchen, giving you a good look at her sweet bubbly figure – a signature trait of many Slyme’s like her. Still, it’s no less pleasing to see her and her apron adorning her rather professional looking body-suit. Despite being such a homely and loving mother figure for the house, she’s a busy girl responsible for running her own shop in town.
+
+You let her know you’ll be just a second and head to your room, getting dressed and equipping your [Omni-Pad]. It rests comfortably on your wrist, although yours is a little more dated than most – it still functions just fine.
+
+** You can use this to access your inventory, stats and many other useful things! **"
 	var story2var = story1var.replace("playerName", ClassVariables.playerName)
 	if ClassVariables.playerChestSize == "Flat":
 		var story3var = story2var.replace("breasts", "chest")
