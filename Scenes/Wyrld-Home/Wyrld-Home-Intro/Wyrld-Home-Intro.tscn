@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://dbpy3k50h60h6" path="res://Scenes/Wyrld-Home/Wyrld-Home-Intro/next_context_grid.gd" id="4_0vlar"]
 [ext_resource type="Script" uid="uid://32mk2mjrny0v" path="res://inventory_button.gd" id="4_xgcqt"]
 [ext_resource type="Script" uid="uid://ir7rbh6g8frk" path="res://Scenes/Inventory/equipment_text.gd" id="5_0vlar"]
+[ext_resource type="Script" uid="uid://cdvcqpqbh8lfe" path="res://Scenes/Wyrld-Home/Wyrld-Home-Intro/end-script.gd" id="5_sl0e7"]
 [ext_resource type="Script" uid="uid://cr2nm8y70ptbk" path="res://Scenes/Wyrld-Home/Wyrld-Home-Intro/final_context_script.gd" id="5_xsjj7"]
 [ext_resource type="Script" uid="uid://bqpry23dxqltj" path="res://Scenes/Wyrld-Home/Wyrld-Home-Intro/wylatt_context_script.gd" id="6_3f7rv"]
 [ext_resource type="Script" uid="uid://bqy557s48tr4m" path="res://Scenes/Wyrld-Home/Wyrld-Home-Intro/wyrld_context_script.gd" id="6_7y084"]
@@ -417,6 +418,9 @@ script = ExtResource("2_se0n0")
 
 [node name="next-context-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box" unique_id=880510822]
 script = ExtResource("4_0vlar")
+
+[node name="end-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box" unique_id=2139243086]
+script = ExtResource("5_sl0e7")
 
 [node name="final-context-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box" unique_id=1592390247]
 script = ExtResource("5_xsjj7")
@@ -1492,6 +1496,7 @@ text = "Items"
 [connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/wyrld-grid/wyrld3" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/wyrld-context-script" method="_on_wyrld_3_pressed"]
 [connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/wyrld-grid/wyrld7" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/wyrld-context-script" method="_on_wyrld_7_pressed"]
 [connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/wyrld-grid/wyrld8" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/wyrld-context-script" method="_on_wyrld_8_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/end-grid/end1" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/end-script" method="_on_end_1_pressed"]
 [connection signal="pressed" from="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise/inventory-button" to="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise/inventory-button" method="_on_pressed"]
 [connection signal="pressed" from="Inventory/Background/MarginContainer/right-side/Choices/decision-box/choice-grid/choice8" to="Inventory/Background/MarginContainer/right-side/switch-controller-script" method="_on_choice_8_pressed"]
 [connection signal="pressed" from="Inventory/Background/MarginContainer/right-side/Choices/decision-box/overview-grid/overview8" to="Inventory/Background/MarginContainer/right-side/switch-controller-script" method="_on_overview_8_pressed"]
