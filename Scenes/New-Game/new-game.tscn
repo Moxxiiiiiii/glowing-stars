@@ -323,7 +323,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="right-side" type="VBoxContainer" parent="Background/MarginContainer" unique_id=587265514]
-custom_minimum_size = Vector2(1500, 0)
 layout_mode = 2
 size_flags_horizontal = 8
 alignment = 2
