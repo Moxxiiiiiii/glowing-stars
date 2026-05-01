@@ -1,7 +1,8 @@
 extends Node
 @onready var save_wylatt_grid: GridContainer = %"save-wylatt-grid"
-@onready var wyaltt_saved_grid: GridContainer = %"wyaltt-saved-grid"
-@onready var wylatt_fallen_grid: GridContainer = %"wylatt-fallen-grid"
+@onready var wylatt_saved_grid: GridContainer = %"wylatt-saved-grid"
+@onready var not_caught_grid: GridContainer = %"not-caught-grid"
+
 
 ## define functions for signals
 func save_him_display():
@@ -49,5 +50,5 @@ func _on_savewylatt_1_pressed() -> void:
 
 func _on_savewylatt_2_pressed() -> void:
 	%"save-wylatt-grid".hide()
-	%"wylatt-fallen-grid".show()
+	%"not-caught-grid".show()
 	let_him_fall_display()

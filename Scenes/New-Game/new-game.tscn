@@ -63,38 +63,44 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="left-side" type="VBoxContainer" parent="Background/MarginContainer" unique_id=450056710]
+[node name="GridContainer" type="GridContainer" parent="Background/MarginContainer" unique_id=1231610720]
+layout_mode = 2
+theme_override_constants/h_separation = 21
+columns = 2
+
+[node name="left-side" type="VBoxContainer" parent="Background/MarginContainer/GridContainer" unique_id=450056710]
 custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
 size_flags_horizontal = 0
+size_flags_vertical = 3
 
-[node name="Stats and Info" type="PanelContainer" parent="Background/MarginContainer/left-side" unique_id=2060551672]
+[node name="Stats and Info" type="PanelContainer" parent="Background/MarginContainer/GridContainer/left-side" unique_id=2060551672]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_80nbo")
 
-[node name="player-icon" type="Panel" parent="Background/MarginContainer/left-side/Stats and Info" unique_id=354420284]
+[node name="player-icon" type="Panel" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info" unique_id=354420284]
 custom_minimum_size = Vector2(0, 225)
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_feb5d")
 
-[node name="stat-block" type="PanelContainer" parent="Background/MarginContainer/left-side/Stats and Info" unique_id=2110029301]
+[node name="stat-block" type="PanelContainer" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info" unique_id=2110029301]
 custom_minimum_size = Vector2(0, 680)
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_styles/panel = SubResource("StyleBoxFlat_fc0e3")
 
-[node name="stat-grid" type="GridContainer" parent="Background/MarginContainer/left-side/Stats and Info/stat-block" unique_id=1915130410]
+[node name="stat-grid" type="GridContainer" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block" unique_id=1915130410]
 layout_mode = 2
 
-[node name="date-time-block" type="Panel" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid" unique_id=1852334067]
+[node name="date-time-block" type="Panel" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid" unique_id=1852334067]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="date-time-grid" type="GridContainer" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/date-time-block" unique_id=1523498126]
+[node name="date-time-grid" type="GridContainer" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/date-time-block" unique_id=1523498126]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -103,7 +109,7 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 2
 
-[node name="date-text" type="RichTextLabel" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/date-time-block/date-time-grid" unique_id=939431861]
+[node name="date-text" type="RichTextLabel" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/date-time-block/date-time-grid" unique_id=939431861]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -112,7 +118,7 @@ text = "Date: xx/xx/xx"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="time-text" type="RichTextLabel" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/date-time-block/date-time-grid" unique_id=1058606319]
+[node name="time-text" type="RichTextLabel" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/date-time-block/date-time-grid" unique_id=1058606319]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -121,13 +127,13 @@ text = "Time: 00:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="stat-panel" type="Panel" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid" unique_id=495768608]
+[node name="stat-panel" type="Panel" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid" unique_id=495768608]
 custom_minimum_size = Vector2(0, 600)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="stat-container" type="VBoxContainer" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel" unique_id=1548636497]
+[node name="stat-container" type="VBoxContainer" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel" unique_id=1548636497]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -136,11 +142,11 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 4
 
-[node name="Panel2" type="Panel" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container" unique_id=1871277871]
+[node name="Panel2" type="Panel" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container" unique_id=1871277871]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="hsl-organise" type="VBoxContainer" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2" unique_id=2048061792]
+[node name="hsl-organise" type="VBoxContainer" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2" unique_id=2048061792]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -150,40 +156,40 @@ grow_vertical = 2
 theme_override_constants/separation = 25
 script = ExtResource("1_ye45e")
 
-[node name="vital-title" type="Label" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2/hsl-organise" unique_id=1207712666]
+[node name="vital-title" type="Label" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2/hsl-organise" unique_id=1207712666]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Vital Stats"
 horizontal_alignment = 1
 
-[node name="health-text" type="Label" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2/hsl-organise" unique_id=1761830370]
+[node name="health-text" type="Label" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2/hsl-organise" unique_id=1761830370]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Health: min / max "
 horizontal_alignment = 1
 
-[node name="shield-text" type="Label" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2/hsl-organise" unique_id=1532206359]
+[node name="shield-text" type="Label" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2/hsl-organise" unique_id=1532206359]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Shields: min / max"
 horizontal_alignment = 1
 
-[node name="lust-text" type="Label" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2/hsl-organise" unique_id=997086038]
+[node name="lust-text" type="Label" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2/hsl-organise" unique_id=997086038]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Lust: min / max"
 horizontal_alignment = 1
 
-[node name="attribute-box" type="Panel" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container" unique_id=104589860]
+[node name="attribute-box" type="Panel" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container" unique_id=104589860]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 1.02
 
-[node name="attribute-organise" type="VBoxContainer" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box" unique_id=1262904981]
+[node name="attribute-organise" type="VBoxContainer" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box" unique_id=1262904981]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -192,47 +198,47 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 11
 
-[node name="attributes-title" type="Label" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=1427200986]
+[node name="attributes-title" type="Label" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=1427200986]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Attributes"
 horizontal_alignment = 1
 
-[node name="strength-text" type="Label" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=811438313]
+[node name="strength-text" type="Label" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=811438313]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Strength: str"
 horizontal_alignment = 1
 
-[node name="intelligence-text" type="Label" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=1741619428]
+[node name="intelligence-text" type="Label" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=1741619428]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Intelligence: int"
 horizontal_alignment = 1
 
-[node name="charisma-text" type="Label" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=2040215062]
+[node name="charisma-text" type="Label" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=2040215062]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Charisma: chr"
 horizontal_alignment = 1
 
-[node name="agility-text" type="Label" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=507350312]
+[node name="agility-text" type="Label" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=507350312]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Agility: agi"
 horizontal_alignment = 1
 
-[node name="inventory-box" type="Panel" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container" unique_id=370480325]
+[node name="inventory-box" type="Panel" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container" unique_id=370480325]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.56
 
-[node name="inventory-organise" type="VBoxContainer" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box" unique_id=1893976711]
+[node name="inventory-organise" type="VBoxContainer" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box" unique_id=1893976711]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -241,30 +247,30 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 18
 
-[node name="Control" type="Control" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise" unique_id=583595816]
+[node name="Control" type="Control" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise" unique_id=583595816]
 layout_mode = 2
 
-[node name="credits-text" type="Label" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise" unique_id=1670548803]
+[node name="credits-text" type="Label" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise" unique_id=1670548803]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Credits: cred"
 horizontal_alignment = 1
 
-[node name="inventory-button" type="Button" parent="Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise" unique_id=908377028]
+[node name="inventory-button" type="Button" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise" unique_id=908377028]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Inventory"
 
-[node name="Save & Load" type="PanelContainer" parent="Background/MarginContainer/left-side" unique_id=1541108757]
+[node name="Save & Load" type="PanelContainer" parent="Background/MarginContainer/GridContainer/left-side" unique_id=1541108757]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-size_flags_vertical = 6
+size_flags_vertical = 10
 size_flags_stretch_ratio = 0.13
 theme_override_styles/panel = SubResource("StyleBoxFlat_e2o6t")
 
-[node name="save-grid" type="GridContainer" parent="Background/MarginContainer/left-side/Save & Load" unique_id=1962805132]
+[node name="save-grid" type="GridContainer" parent="Background/MarginContainer/GridContainer/left-side/Save & Load" unique_id=1962805132]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -272,13 +278,13 @@ theme_override_constants/h_separation = 13
 theme_override_constants/v_separation = 4
 columns = 2
 
-[node name="save-box" type="Panel" parent="Background/MarginContainer/left-side/Save & Load/save-grid" unique_id=1489938400]
+[node name="save-box" type="Panel" parent="Background/MarginContainer/GridContainer/left-side/Save & Load/save-grid" unique_id=1489938400]
 custom_minimum_size = Vector2(156, 68)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="save-text" type="RichTextLabel" parent="Background/MarginContainer/left-side/Save & Load/save-grid/save-box" unique_id=810392646]
+[node name="save-text" type="RichTextLabel" parent="Background/MarginContainer/GridContainer/left-side/Save & Load/save-grid/save-box" unique_id=810392646]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -297,13 +303,13 @@ text = "Save"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="load-box" type="Panel" parent="Background/MarginContainer/left-side/Save & Load/save-grid" unique_id=925142572]
+[node name="load-box" type="Panel" parent="Background/MarginContainer/GridContainer/left-side/Save & Load/save-grid" unique_id=925142572]
 custom_minimum_size = Vector2(156, 68)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="load-text" type="RichTextLabel" parent="Background/MarginContainer/left-side/Save & Load/save-grid/load-box" unique_id=176979287]
+[node name="load-text" type="RichTextLabel" parent="Background/MarginContainer/GridContainer/left-side/Save & Load/save-grid/load-box" unique_id=176979287]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -322,34 +328,41 @@ text = "Load"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="right-side" type="VBoxContainer" parent="Background/MarginContainer" unique_id=587265514]
+[node name="right-side" type="VBoxContainer" parent="Background/MarginContainer/GridContainer" unique_id=587265514]
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 3
+size_flags_vertical = 3
 alignment = 2
 
-[node name="Game info" type="PanelContainer" parent="Background/MarginContainer/right-side" unique_id=1285962374]
+[node name="Game info" type="PanelContainer" parent="Background/MarginContainer/GridContainer/right-side" unique_id=1285962374]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_80nbo")
 
-[node name="MarginContainer" type="MarginContainer" parent="Background/MarginContainer/right-side/Game info" unique_id=1273542832]
+[node name="MarginContainer" type="MarginContainer" parent="Background/MarginContainer/GridContainer/right-side/Game info" unique_id=1273542832]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="context-box" type="Panel" parent="Background/MarginContainer/right-side/Game info/MarginContainer" unique_id=227325637]
+[node name="context-box" type="Panel" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer" unique_id=227325637]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_7jktm")
 
-[node name="context-text" type="RichTextLabel" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box" unique_id=531777206]
+[node name="MarginContainer" type="MarginContainer" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box" unique_id=1463970011]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 4
+
+[node name="context-text" type="RichTextLabel" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer" unique_id=531777206]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 1476.0
-offset_bottom = 781.0
+layout_mode = 2
 theme_override_font_sizes/normal_font_size = 24
 text = "The year is 12,084 of the 4E and the denizens of Earth have long since set their sites on the stars above, although they have found that they're not the only beings out there trying to establish themselves in this incredibly large galaxy. This is a world filled with excitement, danger, love, lust and incredible opportunities to carve your name out into the stars above. But where do you fit in all this exactly?
 
@@ -357,21 +370,21 @@ You have been taken in by a loving guardian who rescued you after your homeworld
 
 Should you choose to accept this new life of yours to explore the world and stars beyond, all you need to do is navigate using the menu below! "
 
-[node name="Choices" type="PanelContainer" parent="Background/MarginContainer/right-side" unique_id=461494912]
+[node name="Choices" type="PanelContainer" parent="Background/MarginContainer/GridContainer/right-side" unique_id=461494912]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 size_flags_vertical = 6
 size_flags_stretch_ratio = 0.13
 theme_override_styles/panel = SubResource("StyleBoxFlat_e2o6t")
 
-[node name="decision-box" type="MarginContainer" parent="Background/MarginContainer/right-side/Choices" unique_id=1306729758]
+[node name="decision-box" type="MarginContainer" parent="Background/MarginContainer/GridContainer/right-side/Choices" unique_id=1306729758]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="choice-grid" type="GridContainer" parent="Background/MarginContainer/right-side/Choices/decision-box" unique_id=1025699463]
+[node name="choice-grid" type="GridContainer" parent="Background/MarginContainer/GridContainer/right-side/Choices/decision-box" unique_id=1025699463]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -379,7 +392,7 @@ theme_override_constants/h_separation = 78
 theme_override_constants/v_separation = 33
 columns = 4
 
-[node name="choice1" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/choice-grid" unique_id=1702335498]
+[node name="choice1" type="Button" parent="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid" unique_id=1702335498]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 68)
 layout_mode = 2
@@ -390,7 +403,7 @@ text = "New Game
 "
 script = ExtResource("2_2iqfd")
 
-[node name="choice2" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/choice-grid" unique_id=107526656]
+[node name="choice2" type="Button" parent="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid" unique_id=107526656]
 custom_minimum_size = Vector2(300, 68)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -399,42 +412,42 @@ theme_override_font_sizes/font_size = 30
 text = "Load Game
 "
 
-[node name="choice3" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/choice-grid" unique_id=268679704]
+[node name="choice3" type="Button" parent="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid" unique_id=268679704]
 custom_minimum_size = Vector2(300, 68)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
 
-[node name="choice4" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/choice-grid" unique_id=1210305282]
+[node name="choice4" type="Button" parent="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid" unique_id=1210305282]
 custom_minimum_size = Vector2(300, 68)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
 
-[node name="choice5" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/choice-grid" unique_id=302050046]
+[node name="choice5" type="Button" parent="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid" unique_id=302050046]
 custom_minimum_size = Vector2(300, 68)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
 
-[node name="choice6" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/choice-grid" unique_id=229157224]
+[node name="choice6" type="Button" parent="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid" unique_id=229157224]
 custom_minimum_size = Vector2(300, 68)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
 
-[node name="choice7" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/choice-grid" unique_id=183763465]
+[node name="choice7" type="Button" parent="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid" unique_id=183763465]
 custom_minimum_size = Vector2(300, 68)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
 
-[node name="choice8" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/choice-grid" unique_id=1672160219]
+[node name="choice8" type="Button" parent="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid" unique_id=1672160219]
 custom_minimum_size = Vector2(300, 68)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -444,4 +457,4 @@ theme_override_font_sizes/font_size = 30
 [node name="class-variables" type="Node" parent="." unique_id=250365118]
 script = SubResource("GDScript_mwb40")
 
-[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/choice-grid/choice1" to="Background/MarginContainer/right-side/Choices/decision-box/choice-grid/choice1" method="_on_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice1" to="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice1" method="_on_pressed"]

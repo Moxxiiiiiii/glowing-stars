@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://dhbldhv6juvq6" path="res://Scenes/Inventory/inv_hsl_organise.gd" id="3_nb1m2"]
 [ext_resource type="Script" uid="uid://ir7rbh6g8frk" path="res://Scenes/Inventory/equipment_text.gd" id="4_6eq6c"]
 [ext_resource type="Script" uid="uid://cpw2ysrmluq2x" path="res://Scenes/Wyrlds-Wonders/Wyrlds-Wonders-Intro/arrival_script.gd" id="4_nb1m2"]
+[ext_resource type="Script" uid="uid://bsnkisbpxbs8d" path="res://Scenes/Wyrlds-Wonders/Wyrlds-Wonders-Intro/hover_control_script.gd" id="4_ut1ee"]
 [ext_resource type="Script" uid="uid://rihd8g3ax1yr" path="res://Scenes/Wyrlds-Wonders/Wyrlds-Wonders-Intro/floor_grid_script.gd" id="5_6eq6c"]
 [ext_resource type="Script" uid="uid://ccq7wwh47c3dy" path="res://Scenes/Inventory/equipment_stats_text.gd" id="5_k7wcy"]
 [ext_resource type="Script" uid="uid://48jw3d776l6u" path="res://Scenes/Inventory/all_items.gd" id="6_h6u05"]
@@ -13,6 +14,12 @@
 [ext_resource type="Script" uid="uid://deoqcrbjvhh2n" path="res://switch_controller_script.gd" id="7_3w70i"]
 [ext_resource type="Script" uid="uid://bfcdg6ipkmwm2" path="res://Scenes/Wyrlds-Wonders/Wyrlds-Wonders-Intro/save_wylatt_script.gd" id="7_h6u05"]
 [ext_resource type="Script" uid="uid://gcmhxmq1sg2a" path="res://Scenes/Wyrlds-Wonders/Wyrlds-Wonders-Intro/wylatt_saved_script.gd" id="8_3w70i"]
+[ext_resource type="Script" uid="uid://catkv040tibgy" path="res://Scenes/Wyrlds-Wonders/Wyrlds-Wonders-Intro/wylatt_help_script.gd" id="9_wd5sj"]
+[ext_resource type="Script" uid="uid://c2hormpmxy0o5" path="res://Scenes/Wyrlds-Wonders/Wyrlds-Wonders-Intro/not_caught_script.gd" id="10_cd8mj"]
+[ext_resource type="Script" uid="uid://drcg58vl0cath" path="res://Scenes/Wyrlds-Wonders/Wyrlds-Wonders-Intro/help_2.gd" id="10_uvxru"]
+[ext_resource type="Script" uid="uid://fo0scno6plnk" path="res://Scenes/Wyrlds-Wonders/Wyrlds-Wonders-Intro/caught_script.gd" id="11_y1m4k"]
+[ext_resource type="Script" uid="uid://g1pqacuddfr8" path="res://Scenes/Wyrlds-Wonders/Wyrlds-Wonders-Intro/floor_grid_3_script.gd" id="12_u3oot"]
+[ext_resource type="Script" uid="uid://c6t51upxfcapn" path="res://Scenes/Wyrlds-Wonders/Wyrlds-Wonders-Intro/end_script.gd" id="13_tfl6t"]
 
 [sub_resource type="GDScript" id="GDScript_80nbo"]
 
@@ -418,6 +425,9 @@ text = "Welcome to Tarin!
 Tarin is a world set far further into the future than our own. It's a world filled with excitement, danger, love, lust and more! To begin your journey, all you need to do is use the menu below. "
 script = ExtResource("3_k3v4n")
 
+[node name="hover-control-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box" unique_id=1690266296]
+script = ExtResource("4_ut1ee")
+
 [node name="arrival-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box" unique_id=1881942891]
 script = ExtResource("4_nb1m2")
 
@@ -432,6 +442,21 @@ script = ExtResource("7_h6u05")
 
 [node name="wylatt-saved-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box" unique_id=1224026747]
 script = ExtResource("8_3w70i")
+
+[node name="wylatt-help-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box" unique_id=2004271434]
+script = ExtResource("9_wd5sj")
+
+[node name="not-caught-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box" unique_id=2129940758]
+script = ExtResource("10_cd8mj")
+
+[node name="caught-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box" unique_id=745272562]
+script = ExtResource("11_y1m4k")
+
+[node name="floor-grid-3-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box" unique_id=1651498654]
+script = ExtResource("12_u3oot")
+
+[node name="end-script" type="Node" parent="Background/MarginContainer/right-side/Game info/MarginContainer/context-box" unique_id=63776920]
+script = ExtResource("13_tfl6t")
 
 [node name="Choices" type="PanelContainer" parent="Background/MarginContainer/right-side" unique_id=461494912]
 custom_minimum_size = Vector2(0, 200)
@@ -870,7 +895,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
 
-[node name="wylatt-fallen-grid" type="GridContainer" parent="Background/MarginContainer/right-side/Choices/decision-box" unique_id=2102784301]
+[node name="help-grid" type="GridContainer" parent="Background/MarginContainer/right-side/Choices/decision-box" unique_id=997760380]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
@@ -880,7 +905,202 @@ theme_override_constants/h_separation = 78
 theme_override_constants/v_separation = 33
 columns = 4
 
-[node name="wylatt-fallen-1" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/wylatt-fallen-grid" unique_id=2066254265]
+[node name="help1" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/help-grid" unique_id=1207787892]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Recieve Head"
+
+[node name="get-head-hover" type="Panel" parent="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help1" unique_id=1511692508]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -1.6620001
+anchor_right = 3.0070002
+anchor_bottom = -0.559
+offset_left = 7.0
+offset_top = 27.016006
+offset_right = -98.10004
+offset_bottom = -4.987999
+
+[node name="get-head-text" type="Label" parent="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help1/get-head-hover" unique_id=806369073]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 5.0
+offset_top = 3.0
+offset_right = 795.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 24
+text = "Have the cutie get on his knees and pay you back with a little lovin’?"
+
+[node name="help2" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/help-grid" unique_id=237100649]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Recieve Cunnilingus"
+script = ExtResource("10_uvxru")
+
+[node name="get-tounge-hover" type="Panel" parent="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help2" unique_id=157701699]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.333
+anchor_top = -1.4410001
+anchor_right = 1.317
+anchor_bottom = -0.809
+offset_left = -0.099998474
+offset_top = -0.011993408
+offset_right = -0.1000061
+offset_bottom = 0.012001038
+
+[node name="get-tongue-text" type="Label" parent="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help2/get-tounge-hover" unique_id=2123711407]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 5.0
+offset_top = 3.0
+offset_right = 496.0
+offset_bottom = 37.0
+theme_override_font_sizes/font_size = 24
+text = "Put that slutty little boy’s tongue to work!"
+
+[node name="help3" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/help-grid" unique_id=1869322607]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Give Head"
+
+[node name="give-head-hover" type="Panel" parent="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help3" unique_id=1738127211]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.597
+anchor_top = -2.1620002
+anchor_right = 1.5400001
+anchor_bottom = -0.69100004
+offset_left = 0.1000061
+offset_top = 0.01600647
+offset_right = -3.0517578e-05
+offset_bottom = -0.011997223
+
+[node name="give-head-text" type="Label" parent="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help3/give-head-hover" unique_id=1033013779]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 6.0
+offset_top = 10.0
+offset_right = 625.0
+offset_bottom = 81.0
+theme_override_font_sizes/font_size = 24
+text = "A strange way to have someone “help” you…
+But even cock-hungry sluts like you need a little love."
+
+[node name="help4" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/help-grid" unique_id=1044183546]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Anal"
+
+[node name="anal-hover" type="Panel" parent="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help4" unique_id=1786548970]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.25
+anchor_top = -2.0440001
+anchor_right = 1.0
+anchor_bottom = -0.70600003
+offset_top = -0.0079956055
+offset_right = 9.0
+offset_bottom = 0.008003235
+
+[node name="anal-text" type="Label" parent="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help4/anal-hover" unique_id=247902914]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 675.0
+offset_bottom = 79.0
+theme_override_font_sizes/font_size = 24
+text = "That ass is too cute to pass up… 
+Surely you’ll be quick enough before Wyrld notices right?"
+
+[node name="help5" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/help-grid" unique_id=847129432]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Nevermind"
+
+[node name="nevermind-hover" type="Panel" parent="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help5" unique_id=358276163]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -2.7210002
+anchor_right = 1.863
+anchor_bottom = -2.088
+offset_left = -1.0
+offset_top = 0.028015137
+offset_right = 0.099975586
+offset_bottom = -0.015991211
+
+[node name="nevermind-text" type="Label" parent="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help5/nevermind-hover" unique_id=25509111]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 4.0
+offset_right = 549.0
+offset_bottom = 39.0
+theme_override_font_sizes/font_size = 24
+text = "You can always call this favour in another time."
+
+[node name="help6" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/help-grid" unique_id=2113396706]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="help7" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/help-grid" unique_id=1190253905]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="help8" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/help-grid" unique_id=994448475]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="not-caught-grid" type="GridContainer" parent="Background/MarginContainer/right-side/Choices/decision-box" unique_id=1812710176]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 78
+theme_override_constants/v_separation = 33
+columns = 4
+
+[node name="notcaught1" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/not-caught-grid" unique_id=79648305]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 68)
 layout_mode = 2
@@ -889,49 +1109,330 @@ size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
 text = "Next"
 
-[node name="wylatt-fallen-2" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/wylatt-fallen-grid" unique_id=2028269969]
+[node name="notcaught2" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/not-caught-grid" unique_id=439861251]
 custom_minimum_size = Vector2(300, 68)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
 
-[node name="wylatt-fallen-3" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/wylatt-fallen-grid" unique_id=2050927304]
+[node name="notcaught3" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/not-caught-grid" unique_id=521642704]
 custom_minimum_size = Vector2(300, 68)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
 
-[node name="wylatt-fallen-4" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/wylatt-fallen-grid" unique_id=2087110347]
+[node name="notcaught4" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/not-caught-grid" unique_id=1788126062]
 custom_minimum_size = Vector2(300, 68)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
 
-[node name="wylatt-fallen-5" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/wylatt-fallen-grid" unique_id=2022183112]
+[node name="notcaught5" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/not-caught-grid" unique_id=913595021]
 custom_minimum_size = Vector2(300, 68)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
 
-[node name="wylatt-fallen-6" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/wylatt-fallen-grid" unique_id=943567223]
+[node name="notcaught6" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/not-caught-grid" unique_id=1160377150]
 custom_minimum_size = Vector2(300, 68)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
 
-[node name="wylatt-fallen-7" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/wylatt-fallen-grid" unique_id=1811322340]
+[node name="notcaught7" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/not-caught-grid" unique_id=889954276]
 custom_minimum_size = Vector2(300, 68)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
 
-[node name="wylatt-fallen-8" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/wylatt-fallen-grid" unique_id=229339565]
+[node name="notcaught8" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/not-caught-grid" unique_id=573715799]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="caught-grid" type="GridContainer" parent="Background/MarginContainer/right-side/Choices/decision-box" unique_id=851932839]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 78
+theme_override_constants/v_separation = 33
+columns = 4
+
+[node name="caught1" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/caught-grid" unique_id=703479096]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Next"
+
+[node name="caught2" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/caught-grid" unique_id=1020323216]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="caught3" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/caught-grid" unique_id=1705992906]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="caught4" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/caught-grid" unique_id=1470422979]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="caught5" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/caught-grid" unique_id=338645386]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="caught6" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/caught-grid" unique_id=643684404]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="caught7" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/caught-grid" unique_id=1073858898]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="caught8" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/caught-grid" unique_id=909690044]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="floor-grid-3" type="GridContainer" parent="Background/MarginContainer/right-side/Choices/decision-box" unique_id=812735667]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 78
+theme_override_constants/v_separation = 33
+columns = 4
+
+[node name="floor-3-1" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/floor-grid-3" unique_id=2015425934]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Next"
+
+[node name="floor-3-2" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/floor-grid-3" unique_id=94385264]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="floor-3-3" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/floor-grid-3" unique_id=545789275]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="floor-3-4" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/floor-grid-3" unique_id=719477769]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="floor-3-5" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/floor-grid-3" unique_id=686356768]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="floor-3-6" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/floor-grid-3" unique_id=1454904582]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="floor-3-7" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/floor-grid-3" unique_id=1048356896]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="floor-3-8" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/floor-grid-3" unique_id=754708180]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="end-grid" type="GridContainer" parent="Background/MarginContainer/right-side/Choices/decision-box" unique_id=567303941]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 78
+theme_override_constants/v_separation = 33
+columns = 4
+
+[node name="end1" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/end-grid" unique_id=543678804]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Wyrld"
+
+[node name="wyrld-hover" type="Panel" parent="Background/MarginContainer/right-side/Choices/decision-box/end-grid/end1" unique_id=743230207]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.037
+anchor_top = -1.2650001
+anchor_right = 1.3470001
+anchor_bottom = -0.632
+offset_left = 0.10000038
+offset_top = 0.020004272
+offset_right = -0.10003662
+offset_bottom = -0.02399826
+
+[node name="wyrld-text" type="Label" parent="Background/MarginContainer/right-side/Choices/decision-box/end-grid/end1/wyrld-hover" unique_id=2027162921]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 7.0
+offset_top = 3.0
+offset_right = 413.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 24
+text = "Ask the Slyme girl some questions"
+
+[node name="end2" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/end-grid" unique_id=158833911]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Wylatt"
+
+[node name="wylatt-hover" type="Panel" parent="Background/MarginContainer/right-side/Choices/decision-box/end-grid/end2" unique_id=1228209357]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.143
+anchor_top = -1.309
+anchor_right = 1.19
+anchor_bottom = -0.632
+offset_left = -0.099998474
+offset_top = 0.012001038
+offset_right = -3.0517578e-05
+offset_bottom = -0.02399826
+
+[node name="wylatt-text" type="Label" parent="Background/MarginContainer/right-side/Choices/decision-box/end-grid/end2/wylatt-hover" unique_id=2006651748]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 388.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 24
+text = "“Hey, wait up! Let’s go together!”"
+vertical_alignment = 1
+
+[node name="end3" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/end-grid" unique_id=313700374]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Explore"
+
+[node name="explore-hover" type="Panel" parent="Background/MarginContainer/right-side/Choices/decision-box/end-grid/end3" unique_id=507914831]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.54700005
+anchor_top = -1.4410001
+anchor_right = 1.5600001
+anchor_bottom = -0.809
+offset_left = 0.10002136
+offset_top = -0.011993408
+offset_right = -3.0517578e-05
+offset_bottom = 0.012001038
+
+[node name="explore-text" type="Label" parent="Background/MarginContainer/right-side/Choices/decision-box/end-grid/end3/explore-hover" unique_id=111210452]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 625.0
+offset_bottom = 44.0
+theme_override_font_sizes/font_size = 24
+text = "This will open up the map so you can explore the city!"
+
+[node name="end4" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/end-grid" unique_id=1128932196]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="end5" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/end-grid" unique_id=1520084217]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="end6" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/end-grid" unique_id=901369981]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="end7" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/end-grid" unique_id=426610691]
+custom_minimum_size = Vector2(300, 68)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="end8" type="Button" parent="Background/MarginContainer/right-side/Choices/decision-box/end-grid" unique_id=1180954786]
 custom_minimum_size = Vector2(300, 68)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1537,6 +2038,33 @@ script = SubResource("GDScript_mwb40")
 [connection signal="mouse_entered" from="Background/MarginContainer/right-side/Choices/decision-box/wylatt-saved-grid/wylatt-saved-3" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/wylatt-saved-script" method="_on_wylattsaved_3_mouse_entered"]
 [connection signal="mouse_exited" from="Background/MarginContainer/right-side/Choices/decision-box/wylatt-saved-grid/wylatt-saved-3" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/wylatt-saved-script" method="_on_wylattsaved_3_mouse_exited"]
 [connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/wylatt-saved-grid/wylatt-saved-3" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/wylatt-saved-script" method="_on_wylattsaved_3_pressed"]
+[connection signal="mouse_entered" from="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help1" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/hover-control-script" method="_on_help_1_mouse_entered"]
+[connection signal="mouse_exited" from="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help1" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/hover-control-script" method="_on_help_1_mouse_exited"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help1" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/wylatt-help-script" method="_on_help_1_pressed"]
+[connection signal="mouse_entered" from="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help2" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/hover-control-script" method="_on_help_2_mouse_entered"]
+[connection signal="mouse_exited" from="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help2" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/hover-control-script" method="_on_help_2_mouse_exited"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help2" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/wylatt-help-script" method="_on_help_2_pressed"]
+[connection signal="mouse_entered" from="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help3" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/hover-control-script" method="_on_help_3_mouse_entered"]
+[connection signal="mouse_exited" from="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help3" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/hover-control-script" method="_on_help_3_mouse_exited"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help3" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/wylatt-help-script" method="_on_help_3_pressed"]
+[connection signal="mouse_entered" from="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help4" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/hover-control-script" method="_on_help_4_mouse_entered"]
+[connection signal="mouse_exited" from="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help4" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/hover-control-script" method="_on_help_4_mouse_exited"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help4" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/wylatt-help-script" method="_on_help_4_pressed"]
+[connection signal="mouse_entered" from="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help5" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/hover-control-script" method="_on_help_5_mouse_entered"]
+[connection signal="mouse_exited" from="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help5" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/hover-control-script" method="_on_help_5_mouse_exited"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/help-grid/help5" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/wylatt-help-script" method="_on_help_5_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/not-caught-grid/notcaught1" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/not-caught-script" method="_on_notcaught_1_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/caught-grid/caught1" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/caught-script" method="_on_caught_1_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/floor-grid-3/floor-3-1" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/floor-grid-3-script" method="_on_floor_31_pressed"]
+[connection signal="mouse_entered" from="Background/MarginContainer/right-side/Choices/decision-box/end-grid/end1" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/hover-control-script" method="_on_end_1_mouse_entered"]
+[connection signal="mouse_exited" from="Background/MarginContainer/right-side/Choices/decision-box/end-grid/end1" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/hover-control-script" method="_on_end_1_mouse_exited"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/end-grid/end1" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/end-script" method="_on_end_1_pressed"]
+[connection signal="mouse_entered" from="Background/MarginContainer/right-side/Choices/decision-box/end-grid/end2" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/hover-control-script" method="_on_end_2_mouse_entered"]
+[connection signal="mouse_exited" from="Background/MarginContainer/right-side/Choices/decision-box/end-grid/end2" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/hover-control-script" method="_on_end_2_mouse_exited"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/end-grid/end2" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/end-script" method="_on_end_2_pressed"]
+[connection signal="mouse_entered" from="Background/MarginContainer/right-side/Choices/decision-box/end-grid/end3" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/hover-control-script" method="_on_end_3_mouse_entered"]
+[connection signal="mouse_exited" from="Background/MarginContainer/right-side/Choices/decision-box/end-grid/end3" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/hover-control-script" method="_on_end_3_mouse_exited"]
+[connection signal="pressed" from="Background/MarginContainer/right-side/Choices/decision-box/end-grid/end3" to="Background/MarginContainer/right-side/Game info/MarginContainer/context-box/end-script" method="_on_end_3_pressed"]
 [connection signal="pressed" from="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise/inventory-button" to="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise/inventory-button" method="_on_pressed"]
 [connection signal="pressed" from="Inventory/Background/MarginContainer/right-side/Choices/decision-box/choice-grid/choice8" to="Inventory/Background/MarginContainer/right-side/switch-controller-script" method="_on_choice_8_pressed"]
 [connection signal="pressed" from="Inventory/Background/MarginContainer/right-side/Choices/decision-box/overview-grid/overview8" to="Inventory/Background/MarginContainer/right-side/switch-controller-script" method="_on_overview_8_pressed"]
