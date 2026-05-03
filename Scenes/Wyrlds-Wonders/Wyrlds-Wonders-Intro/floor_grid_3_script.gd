@@ -34,6 +34,7 @@ You give him a wave… But what will you do now?'
 	var storyVar2 = storyVar1.replace('{playerName}', ClassVariables.playerName)
 	%"context-text".text = storyVar2
 	ClassVariables.playerCredits = ClassVariables.playerCredits + 1000
+	%"credits-text".text = "Credits: " + str(ClassVariables.playerCredits)
 	return ClassVariables.playerCredits
 
 ## Signals

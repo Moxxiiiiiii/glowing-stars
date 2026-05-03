@@ -123,8 +123,10 @@ columns = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("2_4efrf")
 theme_override_font_sizes/normal_font_size = 22
-text = "Date: xx/xx/xx"
+text = " Date: 
+xx/xx/xx"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -132,8 +134,10 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("2_4efrf")
 theme_override_font_sizes/normal_font_size = 22
-text = "Time: 00:00"
+text = " Time: 
+00:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -284,6 +288,7 @@ horizontal_alignment = 1
 [node name="inventory-button" type="Button" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise" unique_id=908377028]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 2
 theme_override_fonts/font = ExtResource("2_4efrf")
 theme_override_font_sizes/font_size = 30
 text = "Inventory"
@@ -351,13 +356,22 @@ grow_vertical = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 4
 
-[node name="context-text" type="RichTextLabel" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer" unique_id=531777206]
+[node name="MarginContainer" type="MarginContainer" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer" unique_id=179772653]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 10
+
+[node name="context-text" type="RichTextLabel" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/MarginContainer" unique_id=531777206]
 unique_name_in_owner = true
 layout_mode = 2
 theme = SubResource("Theme_iwn6n")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
 theme_override_font_sizes/normal_font_size = 30
-text = "The year is 12,084 of the 4E and the denizens of Earth have long since set their sites on the stars above, although they have found that they're not the only beings out there trying to establish themselves in this incredibly large galaxy. This is a world filled with excitement, danger, love, lust and incredible opportunities to carve your name out into the stars above. But where do you fit in all this exactly?
+text = "The year is 12,084 of the 4E and the denizens of Earth have long since set their sites on the stars above. Although they have found that they're not the only beings out there trying to establish themselves in this incredibly large galaxy. This is a world filled with excitement, danger, love, lust and incredible opportunities to carve your name out into the stars above. But where do you fit in all this exactly?
 
 You have been taken in by a loving guardian who rescued you after your homeworld fell to a slaver attack! You now find yourself back on Earth, starting life anew under the household of a wonderfully bubbly Slyme girl.
 

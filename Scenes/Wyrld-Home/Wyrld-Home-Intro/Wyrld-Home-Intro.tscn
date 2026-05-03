@@ -137,7 +137,7 @@ theme_override_constants/margin_bottom = 20
 
 [node name="GridContainer" type="GridContainer" parent="Background/MarginContainer" unique_id=1650956178]
 layout_mode = 2
-theme_override_constants/h_separation = 15
+theme_override_constants/h_separation = 21
 columns = 2
 
 [node name="left-side" type="VBoxContainer" parent="Background/MarginContainer/GridContainer" unique_id=450056710]
@@ -408,14 +408,23 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_7jktm")
 
-[node name="context-text" type="RichTextLabel" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box" unique_id=531777206]
-unique_name_in_owner = true
+[node name="MarginContainer" type="MarginContainer" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box" unique_id=384935517]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 10
+
+[node name="context-text" type="RichTextLabel" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer" unique_id=531777206]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
 theme_override_fonts/normal_font = ExtResource("5_omobh")
 theme_override_font_sizes/normal_font_size = 30
 script = ExtResource("2_se0n0")

@@ -20,8 +20,9 @@ She laughs playfully, clearly enticed by your comment, but for now gets back to 
 	return ClassVariables.playerLustCurrent
 
 func display_possibly_function():
-	ClassVariables.playerLustCurrent = ClassVariables.playerLustCurrent + 10
 	if ClassVariables.playerGender == "Male":
+		ClassVariables.playerLustCurrent = ClassVariables.playerLustCurrent + 10
+		%"lust-text".text = "Lust: " + str(ClassVariables.playerLustCurrent) + " / " + str(ClassVariables.playerLustMax)
 		%"context-text".text = "You wonder out loud if it’d be useful to have stuff like this at home… You don’t really have much experience yet, and it might be nice to explore.
 
 Smiling, wryld opens up to you
@@ -31,7 +32,10 @@ Smiling, wryld opens up to you
 There’s a proud look to her as she talks to you, she really is an expert – why else would she open a business like this? You wonder if you might be able to take her up on that offer later. For now, you get back to the task at hand.
 
 + 10 Lust"
+
 	elif ClassVariables.playerGender == "Female":
+		ClassVariables.playerLustCurrent = ClassVariables.playerLustCurrent + 10
+		%"lust-text".text = "Lust: " + str(ClassVariables.playerLustCurrent) + " / " + str(ClassVariables.playerLustMax)
 		%"context-text".text = "You wonder out loud if it’d be useful to have stuff like this at home… You don’t really have much experience yet, and it might be nice to explore.
 
 Smiling, wryld opens up to you
@@ -42,7 +46,9 @@ There’s a proud look to her as she talks to you, she really is an expert – w
 
 + 10 Lust"
 
-	elif ClassVariables.playerGender == "Neutral":
+	else:
+		ClassVariables.playerLustCurrent = ClassVariables.playerLustCurrent + 10
+		%"lust-text".text = "Lust: " + str(ClassVariables.playerLustCurrent) + " / " + str(ClassVariables.playerLustMax)
 		%"context-text".text = "You wonder out loud if it’d be useful to have stuff like this at home… You don’t really have much experience yet, and it might be nice to explore.
 
 Smiling, wryld opens up to you
@@ -52,6 +58,7 @@ Smiling, wryld opens up to you
 There’s a proud look to her as she talks to you, she really is an expert – why else would she open a business like this? You wonder if you might be able to take her up on that offer later. For now, you get back to the task at hand.
 
 + 10 Lust"
+	%"lust-text".text = "Lust: " + str(ClassVariables.playerLustCurrent) + " / " + str(ClassVariables.playerLustMax)
 	return ClassVariables.playerLustCurrent
 
 

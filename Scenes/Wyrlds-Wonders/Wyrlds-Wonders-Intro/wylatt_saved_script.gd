@@ -43,6 +43,7 @@ A mix of desire and nerves twist his face a little, biting his lower lip as he s
 	var storyText3 = storyText2.replace('{playerName}', ClassVariables.playerName)
 	%"context-text".text = storyText3
 	ClassVariables.playerLustCurrent = ClassVariables.playerLustCurrent + 50
+	%"lust-text".text = "Lust: " + str(ClassVariables.playerLustCurrent) + " / " + str(ClassVariables.playerLustMax)
 	return ClassVariables.playerLustCurrent
 
 ## Signals Pressed

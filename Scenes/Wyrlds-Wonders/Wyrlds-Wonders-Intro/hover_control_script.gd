@@ -1,14 +1,14 @@
 extends Node
 
 ## Define Variables
-@onready var get_head_hover: Panel = %"get-head-hover"
-@onready var get_tounge_hover: Panel = %"get-tounge-hover"
-@onready var give_head_hover: Panel = %"give-head-hover"
-@onready var anal_hover: Panel = %"anal-hover"
-@onready var nevermind_hover: Panel = %"nevermind-hover"
-@onready var wyrld_hover: Panel = %"wyrld-hover"
-@onready var wylatt_hover: Panel = %"wylatt-hover"
-@onready var explore_hover: Panel = %"explore-hover"
+@onready var get_head_hover: Label = %"get-head-hover"
+@onready var get_tounge_hover: Label = %"get-tongue-hover"
+@onready var give_head_hover: Label = %"give-head-hover"
+@onready var anal_hover: Label = %"anal-hover"
+@onready var nevermind_hover: Label = %"nevermind-hover"
+@onready var wyrld_hover: Label = %"wyrld-hover"
+@onready var wylatt_hover: Label = %"wylatt-hover"
+@onready var explore_hover: Label = %"explore-hover"
 
 ## Help Grid Buttons
 func _on_help_1_mouse_entered() -> void:
@@ -19,10 +19,10 @@ func _on_help_1_mouse_exited() -> void:
 
 
 func _on_help_2_mouse_entered() -> void:
-	%"get-tounge-hover".show()
+	%"get-tongue-hover".show()
 
 func _on_help_2_mouse_exited() -> void:
-	%"get-tounge-hover".hide()
+	%"get-tongue-hover".hide()
 
 
 func _on_help_3_mouse_entered() -> void:

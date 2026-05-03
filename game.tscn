@@ -360,6 +360,7 @@ horizontal_alignment = 1
 [node name="inventory-button" type="Button" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise" unique_id=908377028]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 2
 theme_override_fonts/font = ExtResource("3_vef74")
 theme_override_font_sizes/font_size = 30
 text = "Inventory"
@@ -418,16 +419,25 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_7jktm")
 
-[node name="context-text" type="RichTextLabel" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box" unique_id=531777206]
-unique_name_in_owner = true
+[node name="MarginContainer" type="MarginContainer" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box" unique_id=551947394]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 10
+
+[node name="context-text" type="RichTextLabel" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer" unique_id=531777206]
+unique_name_in_owner = true
+layout_mode = 2
 theme = SubResource("Theme_vef74")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
 text = "Welcome to Tarin!
 
 Tarin is a world set far further into the future than our own. It's a world filled with excitement, danger, love, lust and more! To begin your journey, all you need to do is use the menu below. "

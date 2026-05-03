@@ -13,7 +13,7 @@ Taking a step out of the shower, and toweling yourself off – you wrap the damp
 
 “Hiii there m’ little cutie!!” She excitedly beams out the moment she sees you, approaching you so she can wrap her gooey blue arms around you and pull you into a *biiiig* hug! It’s a little embarrasing, being pulled into those bouncy orbs on her chest – the soft, squishy cushions feel almost like a water bed with a little more give as she keeps you close.
 
-You say remark that you’re not really her child, but thank her for her affection anyway – eventually breaking apart when she let’s you free.
+You remark that you’re not really her child, but thank her for her affection anyway – eventually breaking apart when she let’s you free.
 
 “C’mon over to the kitchen playerName, breakfast is just about ready and Wylatt will be here soon.” She saunters off cheerfully down the hall and towards the kitchen, giving you a good look at her sweet bubbly figure – a signature trait of many Slyme’s like her. Still, it’s no less pleasing to see her and her apron adorning her rather professional looking body-suit. Despite being such a homely and loving mother figure for the house, she’s a busy girl responsible for running her own shop in town.
 

@@ -25,5 +25,5 @@ She takes 2 more of those out of the box, neatly lining them up in the display b
 ## Signals
 func _on_caught_1_pressed() -> void: 
 	display_caught()
-	%"help-grid".hide()
+	%"caught-grid".hide()
 	%"floor-grid-3".show()

@@ -158,7 +158,7 @@ theme_override_constants/margin_bottom = 20
 
 [node name="GridContainer" type="GridContainer" parent="Background/MarginContainer" unique_id=33441930]
 layout_mode = 2
-theme_override_constants/h_separation = 15
+theme_override_constants/h_separation = 21
 columns = 2
 
 [node name="left-side" type="VBoxContainer" parent="Background/MarginContainer/GridContainer" unique_id=450056710]
@@ -256,13 +256,16 @@ script = ExtResource("1_hupkp")
 [node name="vital-title" type="Label" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2/hsl-organise" unique_id=1207712666]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("1_riqsa")
+theme_override_font_sizes/font_size = 32
 text = "Vital Stats"
 horizontal_alignment = 1
 
 [node name="health-text" type="Label" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2/hsl-organise" unique_id=1761830370]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_riqsa")
 theme_override_font_sizes/font_size = 24
 text = "Health: min / max "
 horizontal_alignment = 1
@@ -270,6 +273,7 @@ horizontal_alignment = 1
 [node name="shield-text" type="Label" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2/hsl-organise" unique_id=1532206359]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_riqsa")
 theme_override_font_sizes/font_size = 24
 text = "Shields: min / max"
 horizontal_alignment = 1
@@ -277,6 +281,8 @@ horizontal_alignment = 1
 [node name="lust-text" type="Label" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/Panel2/hsl-organise" unique_id=997086038]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 2
+theme_override_fonts/font = ExtResource("1_riqsa")
 theme_override_font_sizes/font_size = 24
 text = "Lust: min / max"
 horizontal_alignment = 1
@@ -298,13 +304,16 @@ theme_override_constants/separation = 11
 [node name="attributes-title" type="Label" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=1427200986]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("1_riqsa")
+theme_override_font_sizes/font_size = 32
 text = "Attributes"
 horizontal_alignment = 1
 
 [node name="strength-text" type="Label" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=811438313]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_riqsa")
 theme_override_font_sizes/font_size = 24
 text = "Strength: str"
 horizontal_alignment = 1
@@ -312,6 +321,7 @@ horizontal_alignment = 1
 [node name="intelligence-text" type="Label" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=1741619428]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_riqsa")
 theme_override_font_sizes/font_size = 24
 text = "Intelligence: int"
 horizontal_alignment = 1
@@ -319,6 +329,7 @@ horizontal_alignment = 1
 [node name="charisma-text" type="Label" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=2040215062]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_riqsa")
 theme_override_font_sizes/font_size = 24
 text = "Charisma: chr"
 horizontal_alignment = 1
@@ -326,6 +337,8 @@ horizontal_alignment = 1
 [node name="agility-text" type="Label" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/attribute-box/attribute-organise" unique_id=507350312]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 2
+theme_override_fonts/font = ExtResource("1_riqsa")
 theme_override_font_sizes/font_size = 24
 text = "Agility: agi"
 horizontal_alignment = 1
@@ -350,6 +363,7 @@ layout_mode = 2
 [node name="credits-text" type="Label" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise" unique_id=1670548803]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_riqsa")
 theme_override_font_sizes/font_size = 30
 text = "Credits: cred"
 horizontal_alignment = 1
@@ -357,6 +371,7 @@ horizontal_alignment = 1
 [node name="inventory-button" type="Button" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise" unique_id=908377028]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_riqsa")
 theme_override_font_sizes/font_size = 30
 text = "Inventory"
 
@@ -413,15 +428,24 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_7jktm")
 
-[node name="context-text" type="RichTextLabel" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box" unique_id=531777206]
-unique_name_in_owner = true
+[node name="MarginContainer" type="MarginContainer" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box" unique_id=2100848880]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 10
+
+[node name="context-text" type="RichTextLabel" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer" unique_id=531777206]
+unique_name_in_owner = true
+layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
 theme_override_fonts/normal_font = ExtResource("4_a5336")
 theme_override_font_sizes/normal_font_size = 30
 text = "The sun rises, it's rays of light beaming through the clear glass window hanging just above your bed. It's round, with no visible bars or decorations between - set within a white metallic wall. Your room is decorated fairly plainly, having only been adopted here a month ago by your new caretaker. Your head is too foggy to think much of it right now, so you pick yourself up from your bed and head towards the bathroom.
@@ -432,76 +456,79 @@ You disrobe sluggishly, getting a good look of yourself in the mirror...
 Who are you?"
 script = ExtResource("2_ea161")
 
-[node name="Name-edit" type="LineEdit" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text" unique_id=968762565]
+[node name="Name-edit" type="LineEdit" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text" unique_id=968762565]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 2.0
-offset_top = 4.0
-offset_right = -1021.0
-offset_bottom = -324.0
+offset_left = 0.5
+offset_top = 20.0
+offset_right = -1022.5
+offset_bottom = -308.0
 theme_override_fonts/font = ExtResource("4_a5336")
 theme_override_font_sizes/font_size = 30
 emoji_menu_enabled = false
 
-[node name="name-confirm" type="Label" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text" unique_id=2053704803]
+[node name="name-confirm" type="Label" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text" unique_id=2053704803]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 3.0
 offset_top = 414.0
 offset_right = 307.0
 offset_bottom = 473.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("4_a5336")
 theme_override_font_sizes/font_size = 30
 script = ExtResource("3_77fi1")
 
-[node name="confirm-script" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text" unique_id=361399538]
+[node name="confirm-script" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text" unique_id=361399538]
 script = ExtResource("4_hupkp")
 
-[node name="class-script" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text" unique_id=1263577405]
+[node name="class-script" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text" unique_id=1263577405]
 script = ExtResource("4_bynnx")
 
-[node name="gender-script" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text" unique_id=1832494788]
+[node name="gender-script" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text" unique_id=1832494788]
 script = ExtResource("4_jlwvk")
 
-[node name="chestsize-script" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text" unique_id=1902836086]
+[node name="chestsize-script" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text" unique_id=1902836086]
 script = ExtResource("4_6ndy6")
 
-[node name="dicksizeE-script" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text" unique_id=1855902437]
+[node name="dicksizeE-script" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text" unique_id=1855902437]
 script = ExtResource("4_kircn")
 
-[node name="dicksizeFHVS-script" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script" unique_id=313122542]
+[node name="dicksizeFHVS-script" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/dicksizeE-script" unique_id=313122542]
 script = ExtResource("5_6ndy6")
 
-[node name="hairlength-script" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text" unique_id=95459031]
+[node name="hairlength-script" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text" unique_id=95459031]
 script = ExtResource("4_vje74")
 
-[node name="haircolor-script" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text" unique_id=1016799989]
+[node name="haircolor-script" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text" unique_id=1016799989]
 script = ExtResource("4_uemx7")
 
-[node name="eyecolor-script" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text" unique_id=590675628]
+[node name="eyecolor-script" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text" unique_id=590675628]
 script = ExtResource("10_wecu7")
 
-[node name="height-script" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text" unique_id=1794551858]
+[node name="height-script" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text" unique_id=1794551858]
 unique_name_in_owner = true
 script = ExtResource("4_d0b7a")
 
-[node name="stature-script-FHV" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text" unique_id=1389740892]
+[node name="stature-script-FHV" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text" unique_id=1389740892]
 script = ExtResource("5_5blr1")
 
-[node name="stature-script-S" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/stature-script-FHV" unique_id=2112023532]
+[node name="stature-script-S" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/stature-script-FHV" unique_id=2112023532]
 script = ExtResource("6_vc7we")
 
-[node name="stature-script-E" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/stature-script-FHV" unique_id=1563225192]
+[node name="stature-script-E" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/stature-script-FHV" unique_id=1563225192]
 script = ExtResource("7_2ttx1")
 
-[node name="skincolor-script-S" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text" unique_id=1639088648]
+[node name="skincolor-script-S" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text" unique_id=1639088648]
 script = ExtResource("9_wecu7")
 
-[node name="skincolor-script-FHVE" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/skincolor-script-S" unique_id=259527182]
+[node name="skincolor-script-FHVE" type="Node" parent="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/skincolor-script-S" unique_id=259527182]
 script = ExtResource("8_uxmki")
 
 [node name="Choices" type="PanelContainer" parent="Background/MarginContainer/GridContainer/right-side" unique_id=461494912]
@@ -1921,90 +1948,90 @@ theme_override_font_sizes/font_size = 30
 [node name="class-variables" type="Node" parent="." unique_id=250365118]
 script = SubResource("GDScript_mwb40")
 
-[connection signal="text_submitted" from="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/Name-edit" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/name-confirm" method="_on_nameedit_text_submitted"]
+[connection signal="text_submitted" from="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/Name-edit" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/name-confirm" method="_on_nameedit_text_submitted"]
 [connection signal="mouse_entered" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice1" to="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice1/felynx-chover" method="_on_choice_1_mouse_entered"]
 [connection signal="mouse_exited" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice1" to="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice1/felynx-chover" method="_on_choice_1_mouse_exited"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice1" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text" method="_on_choice_1_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice1" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text" method="_on_choice_1_pressed"]
 [connection signal="mouse_entered" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice2" to="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice2/human-chover" method="_on_choice_2_mouse_entered"]
 [connection signal="mouse_exited" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice2" to="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice2/human-chover" method="_on_choice_2_mouse_exited"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice2" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text" method="_on_choice_2_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice2" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text" method="_on_choice_2_pressed"]
 [connection signal="mouse_entered" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice3" to="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice3/slyme-chover" method="_on_choice_3_mouse_entered"]
 [connection signal="mouse_exited" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice3" to="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice3/slyme-chover" method="_on_choice_3_mouse_exited"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice3" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text" method="_on_choice_3_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice3" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text" method="_on_choice_3_pressed"]
 [connection signal="mouse_entered" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice4" to="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice4/vulpine-chover" method="_on_choice_4_mouse_entered"]
 [connection signal="mouse_exited" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice4" to="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice4/vulpine-chover" method="_on_choice_4_mouse_exited"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice4" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text" method="_on_choice_4_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice4" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text" method="_on_choice_4_pressed"]
 [connection signal="mouse_entered" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice5" to="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice5/equine-chover" method="_on_choice_5_mouse_entered"]
 [connection signal="mouse_exited" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice5" to="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice5/equine-chover" method="_on_choice_5_mouse_exited"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice5" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text" method="_on_choice_5_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/height-grid/height1" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/height-script" method="_on_height_1_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/height-grid/height2" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/height-script" method="_on_height_2_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/height-grid/height3" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/height-script" method="_on_height_3_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/height-grid/height4" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/height-script" method="_on_height_4_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/height-grid/height5" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/height-script" method="_on_height_5_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/height-grid/height6" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/height-script" method="_on_height_6_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/height-grid/height7" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/height-script" method="_on_height_7_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/stature-grid-FHV/stature1" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/stature-script-FHV" method="_on_stature_1_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/stature-grid-FHV/stature2" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/stature-script-FHV" method="_on_stature_2_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/stature-grid-FHV/stature3" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/stature-script-FHV" method="_on_stature_3_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/stature-grid-FHV/stature4" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/stature-script-FHV" method="_on_stature_4_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/stature-grid-FHV/stature5" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/stature-script-FHV" method="_on_stature_5_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/stature-grid-S/stature1-S" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/stature-script-FHV/stature-script-S" method="_on_stature_1s_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/stature-grid-E/stature1-E" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/stature-script-FHV/stature-script-E" method="_on_stature_1e_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/stature-grid-E/stature2-E" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/stature-script-FHV/stature-script-E" method="_on_stature_2e_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/stature-grid-E/stature3-E" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/stature-script-FHV/stature-script-E" method="_on_stature_3e_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/skincolor-gridFHVE/skincolor1-FHVE" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/skincolor-script-S/skincolor-script-FHVE" method="_on_skincolor_1fhve_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/skincolor-gridFHVE/skincolor2-FHVE" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/skincolor-script-S/skincolor-script-FHVE" method="_on_skincolor_2fhve_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/skincolor-gridFHVE/skincolor3-FHVE" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/skincolor-script-S/skincolor-script-FHVE" method="_on_skincolor_3fhve_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/skincolor-gridFHVE/skincolor4-FHVE" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/skincolor-script-S/skincolor-script-FHVE" method="_on_skincolor_4fhve_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/skincolor-gridS/skincolor1-S" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/skincolor-script-S" method="_on_skincolor_1s_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/skincolor-gridS/skincolor2-S" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/skincolor-script-S" method="_on_skincolor_2s_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/skincolor-gridS/skincolor3-S" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/skincolor-script-S" method="_on_skincolor_3s_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/skincolor-gridS/skincolor4-S" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/skincolor-script-S" method="_on_skincolor_4s_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/skincolor-gridS/skincolor5-S" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/skincolor-script-S" method="_on_skincolor_5s_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/skincolor-gridS/skincolor6-S" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/skincolor-script-S" method="_on_skincolor_6s_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/eyecolor-grid/eyecolor1" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/eyecolor-script" method="_on_eyecolor_1_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/eyecolor-grid/eyecolor2" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/eyecolor-script" method="_on_eyecolor_2_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/eyecolor-grid/eyecolor3" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/eyecolor-script" method="_on_eyecolor_3_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/eyecolor-grid/eyecolor4" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/eyecolor-script" method="_on_eyecolor_4_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/eyecolor-grid/eyecolor5" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/eyecolor-script" method="_on_eyecolor_5_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/eyecolor-grid/eyecolor6" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/eyecolor-script" method="_on_eyecolor_6_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/eyecolor-grid/eyecolor7" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/eyecolor-script" method="_on_eyecolor_7_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/haircolor-grid/haircolor1" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/haircolor-script" method="_on_haircolor_1_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/haircolor-grid/haircolor2" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/haircolor-script" method="_on_haircolor_2_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/haircolor-grid/haircolor3" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/haircolor-script" method="_on_haircolor_3_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/haircolor-grid/haircolor4" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/haircolor-script" method="_on_haircolor_4_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/haircolor-grid/haircolor5" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/haircolor-script" method="_on_haircolor_5_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/haircolor-grid/haircolor6" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/haircolor-script" method="_on_haircolor_6_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/haircolor-grid/haircolor7" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/haircolor-script" method="_on_haircolor_7_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/haircolor-grid/haircolor8" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/haircolor-script" method="_on_haircolor_8_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/hairlength-grid/hairlength1" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/hairlength-script" method="_on_hairlength_1_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/hairlength-grid/hairlength2" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/hairlength-script" method="_on_hairlength_2_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/hairlength-grid/hairlength3" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/hairlength-script" method="_on_hairlength_3_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize1FHVS" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script/dicksizeFHVS-script" method="_on_dicksize_1fhvs_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize2FHVS" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script/dicksizeFHVS-script" method="_on_dicksize_2fhvs_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize3FHVS" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script/dicksizeFHVS-script" method="_on_dicksize_3fhvs_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize4FHVS" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script/dicksizeFHVS-script" method="_on_dicksize_4fhvs_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize5FHVS" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script/dicksizeFHVS-script" method="_on_dicksize_5fhvs_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize6FHVS" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script/dicksizeFHVS-script" method="_on_dicksize_6fhvs_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridE/dicksize1E" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script" method="_on_dicksize_1e_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridE/dicksize2E" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script" method="_on_dicksize_2e_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridE/dicksize3E" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script" method="_on_dicksize_3e_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridE/dicksize4E" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script" method="_on_dicksize_4e_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridE/dicksize5E" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script" method="_on_dicksize_5e_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridE/dicksize6E" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/dicksizeE-script" method="_on_dicksize_6e_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/chestsize-grid/chestsize1" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/chestsize-script" method="_on_chestsize_1_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/chestsize-grid/chestsize2" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/chestsize-script" method="_on_chestsize_2_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/chestsize-grid/chestsize3" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/chestsize-script" method="_on_chestsize_3_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/chestsize-grid/chestsize4" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/chestsize-script" method="_on_chestsize_4_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/chestsize-grid/chestsize5" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/chestsize-script" method="_on_chestsize_5_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/chestsize-grid/chestsize6" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/chestsize-script" method="_on_chestsize_6_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/gender-grid/gender1" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/gender-script" method="_on_gender_1_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/gender-grid/gender2" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/gender-script" method="_on_gender_2_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/gender-grid/gender3" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/gender-script" method="_on_gender_3_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/class-grid/class1" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/class-script" method="_on_class_1_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/class-grid/class2" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/class-script" method="_on_class_2_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/class-grid/class3" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/class-script" method="_on_class_3_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/class-grid/class4" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/class-script" method="_on_class_4_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/confirm-grid/confirm1" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/confirm-script" method="_on_confirm_1_pressed"]
-[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/confirm-grid/confirm2" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/context-text/confirm-script" method="_on_confirm_2_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/choice-grid/choice5" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text" method="_on_choice_5_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/height-grid/height1" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/height-script" method="_on_height_1_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/height-grid/height2" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/height-script" method="_on_height_2_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/height-grid/height3" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/height-script" method="_on_height_3_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/height-grid/height4" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/height-script" method="_on_height_4_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/height-grid/height5" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/height-script" method="_on_height_5_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/height-grid/height6" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/height-script" method="_on_height_6_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/height-grid/height7" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/height-script" method="_on_height_7_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/stature-grid-FHV/stature1" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/stature-script-FHV" method="_on_stature_1_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/stature-grid-FHV/stature2" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/stature-script-FHV" method="_on_stature_2_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/stature-grid-FHV/stature3" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/stature-script-FHV" method="_on_stature_3_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/stature-grid-FHV/stature4" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/stature-script-FHV" method="_on_stature_4_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/stature-grid-FHV/stature5" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/stature-script-FHV" method="_on_stature_5_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/stature-grid-S/stature1-S" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/stature-script-FHV/stature-script-S" method="_on_stature_1s_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/stature-grid-E/stature1-E" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/stature-script-FHV/stature-script-E" method="_on_stature_1e_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/stature-grid-E/stature2-E" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/stature-script-FHV/stature-script-E" method="_on_stature_2e_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/stature-grid-E/stature3-E" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/stature-script-FHV/stature-script-E" method="_on_stature_3e_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/skincolor-gridFHVE/skincolor1-FHVE" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/skincolor-script-S/skincolor-script-FHVE" method="_on_skincolor_1fhve_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/skincolor-gridFHVE/skincolor2-FHVE" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/skincolor-script-S/skincolor-script-FHVE" method="_on_skincolor_2fhve_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/skincolor-gridFHVE/skincolor3-FHVE" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/skincolor-script-S/skincolor-script-FHVE" method="_on_skincolor_3fhve_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/skincolor-gridFHVE/skincolor4-FHVE" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/skincolor-script-S/skincolor-script-FHVE" method="_on_skincolor_4fhve_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/skincolor-gridS/skincolor1-S" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/skincolor-script-S" method="_on_skincolor_1s_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/skincolor-gridS/skincolor2-S" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/skincolor-script-S" method="_on_skincolor_2s_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/skincolor-gridS/skincolor3-S" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/skincolor-script-S" method="_on_skincolor_3s_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/skincolor-gridS/skincolor4-S" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/skincolor-script-S" method="_on_skincolor_4s_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/skincolor-gridS/skincolor5-S" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/skincolor-script-S" method="_on_skincolor_5s_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/skincolor-gridS/skincolor6-S" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/skincolor-script-S" method="_on_skincolor_6s_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/eyecolor-grid/eyecolor1" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/eyecolor-script" method="_on_eyecolor_1_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/eyecolor-grid/eyecolor2" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/eyecolor-script" method="_on_eyecolor_2_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/eyecolor-grid/eyecolor3" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/eyecolor-script" method="_on_eyecolor_3_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/eyecolor-grid/eyecolor4" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/eyecolor-script" method="_on_eyecolor_4_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/eyecolor-grid/eyecolor5" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/eyecolor-script" method="_on_eyecolor_5_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/eyecolor-grid/eyecolor6" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/eyecolor-script" method="_on_eyecolor_6_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/eyecolor-grid/eyecolor7" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/eyecolor-script" method="_on_eyecolor_7_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/haircolor-grid/haircolor1" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/haircolor-script" method="_on_haircolor_1_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/haircolor-grid/haircolor2" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/haircolor-script" method="_on_haircolor_2_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/haircolor-grid/haircolor3" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/haircolor-script" method="_on_haircolor_3_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/haircolor-grid/haircolor4" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/haircolor-script" method="_on_haircolor_4_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/haircolor-grid/haircolor5" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/haircolor-script" method="_on_haircolor_5_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/haircolor-grid/haircolor6" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/haircolor-script" method="_on_haircolor_6_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/haircolor-grid/haircolor7" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/haircolor-script" method="_on_haircolor_7_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/haircolor-grid/haircolor8" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/haircolor-script" method="_on_haircolor_8_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/hairlength-grid/hairlength1" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/hairlength-script" method="_on_hairlength_1_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/hairlength-grid/hairlength2" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/hairlength-script" method="_on_hairlength_2_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/hairlength-grid/hairlength3" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/hairlength-script" method="_on_hairlength_3_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize1FHVS" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/dicksizeE-script/dicksizeFHVS-script" method="_on_dicksize_1fhvs_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize2FHVS" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/dicksizeE-script/dicksizeFHVS-script" method="_on_dicksize_2fhvs_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize3FHVS" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/dicksizeE-script/dicksizeFHVS-script" method="_on_dicksize_3fhvs_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize4FHVS" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/dicksizeE-script/dicksizeFHVS-script" method="_on_dicksize_4fhvs_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize5FHVS" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/dicksizeE-script/dicksizeFHVS-script" method="_on_dicksize_5fhvs_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridFHVS/dicksize6FHVS" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/dicksizeE-script/dicksizeFHVS-script" method="_on_dicksize_6fhvs_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridE/dicksize1E" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/dicksizeE-script" method="_on_dicksize_1e_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridE/dicksize2E" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/dicksizeE-script" method="_on_dicksize_2e_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridE/dicksize3E" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/dicksizeE-script" method="_on_dicksize_3e_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridE/dicksize4E" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/dicksizeE-script" method="_on_dicksize_4e_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridE/dicksize5E" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/dicksizeE-script" method="_on_dicksize_5e_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/dicksize-gridE/dicksize6E" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/dicksizeE-script" method="_on_dicksize_6e_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/chestsize-grid/chestsize1" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/chestsize-script" method="_on_chestsize_1_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/chestsize-grid/chestsize2" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/chestsize-script" method="_on_chestsize_2_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/chestsize-grid/chestsize3" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/chestsize-script" method="_on_chestsize_3_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/chestsize-grid/chestsize4" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/chestsize-script" method="_on_chestsize_4_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/chestsize-grid/chestsize5" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/chestsize-script" method="_on_chestsize_5_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/chestsize-grid/chestsize6" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/chestsize-script" method="_on_chestsize_6_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/gender-grid/gender1" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/gender-script" method="_on_gender_1_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/gender-grid/gender2" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/gender-script" method="_on_gender_2_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/gender-grid/gender3" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/gender-script" method="_on_gender_3_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/class-grid/class1" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/class-script" method="_on_class_1_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/class-grid/class2" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/class-script" method="_on_class_2_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/class-grid/class3" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/class-script" method="_on_class_3_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/class-grid/class4" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/class-script" method="_on_class_4_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/confirm-grid/confirm1" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/confirm-script" method="_on_confirm_1_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/GridContainer/right-side/Choices/decision-box/confirm-grid/confirm2" to="Background/MarginContainer/GridContainer/right-side/Game info/MarginContainer/context-box/MarginContainer/context-text/confirm-script" method="_on_confirm_2_pressed"]

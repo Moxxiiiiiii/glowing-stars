@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://b6d100ptc8lbw" path="res://addons/fonts/NerdFont/3270NerdFont-Condensed.ttf" id="2_4j661"]
 [ext_resource type="FontFile" uid="uid://c1s8c4g6vmuy2" path="res://addons/fonts/NerdFont/3270NerdFont-Regular.ttf" id="3_p5cf7"]
 
-[sub_resource type="Image" id="Image_xjxyv"]
+[sub_resource type="Image" id="Image_vo6d5"]
 data = {
 "data": PackedByteArray(255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255),
 "format": "RGBA8",
@@ -14,7 +14,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_tk2y1"]
-image = SubResource("Image_xjxyv")
+image = SubResource("Image_vo6d5")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wo7x0"]
 content_margin_left = 4.0
