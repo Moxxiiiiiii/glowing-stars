@@ -23,41 +23,53 @@ func display_possibly_function():
 	if ClassVariables.playerGender == "Male":
 		ClassVariables.playerLustCurrent = ClassVariables.playerLustCurrent + 10
 		%"lust-text".text = "Lust: " + str(ClassVariables.playerLustCurrent) + " / " + str(ClassVariables.playerLustMax)
-		%"context-text".text = "You wonder out loud if it’d be useful to have stuff like this at home… You don’t really have much experience yet, and it might be nice to explore.
+		%"context-text".text = ""
+		var storyvar1 = 'You wonder out loud if it’d be useful to have stuff like this at home… You don’t really have much experience yet, and it might be nice to explore.
 
-Smiling, wryld opens up to you
+Smiling, wryld opens up to you.
 
-“Of ‘course cutie! You’ll have to pay for things as anybody else would but you will get a discount naturally since you work here. And… You’re more than right! It’s okay to take time and explore yourself, healthy even for a growing boy like you. Besides, if you need any help or demonstrations you can always come to me~ Not to brag but… I’m kind of an expert!”
+[center][img]res://addons/sprites/Wyrld-1.png[/img]
+
+“Of ‘course cutie! You’ll have to pay for things as anybody else would but you will get a discount naturally since you work here. And… You’re more than right! It’s okay to take time and explore yourself, healthy even for a growing boy like you. Besides, if you need any help or demonstrations you can always come to me~ Not to brag but… I’m kind of an expert!”[/center]
 
 There’s a proud look to her as she talks to you, she really is an expert – why else would she open a business like this? You wonder if you might be able to take her up on that offer later. For now, you get back to the task at hand.
 
-+ 10 Lust"
++ 10 Lust'
+		%"context-text".append_text(str(storyvar1))
 
 	elif ClassVariables.playerGender == "Female":
 		ClassVariables.playerLustCurrent = ClassVariables.playerLustCurrent + 10
 		%"lust-text".text = "Lust: " + str(ClassVariables.playerLustCurrent) + " / " + str(ClassVariables.playerLustMax)
-		%"context-text".text = "You wonder out loud if it’d be useful to have stuff like this at home… You don’t really have much experience yet, and it might be nice to explore.
+		%"context-text".text = ""
+		var storyvar1 = "You wonder out loud if it’d be useful to have stuff like this at home… You don’t really have much experience yet, and it might be nice to explore.
 
 Smiling, wryld opens up to you
 
-“Of ‘course cutie! You’ll have to pay for things as anybody else would but you will get a discount naturally since you work here. And… You’re more than right! It’s okay to take time and explore yourself, healthy even for a growing girl like you. Besides, if you need any help or demonstrations you can always come to me~ Not to brag but… I’m kind of an expert!”
+[center][img]res://addons/sprites/Wyrld-1.png[/img]
+
+“Of ‘course cutie! You’ll have to pay for things as anybody else would but you will get a discount naturally since you work here. And… You’re more than right! It’s okay to take time and explore yourself, healthy even for a growing girl like you. Besides, if you need any help or demonstrations you can always come to me~ Not to brag but… I’m kind of an expert!”[/center]
 
 There’s a proud look to her as she talks to you, she really is an expert – why else would she open a business like this? You wonder if you might be able to take her up on that offer later. For now, you get back to the task at hand.
 
 + 10 Lust"
+		%"context-text".append_text(str(storyvar1))
 
 	else:
 		ClassVariables.playerLustCurrent = ClassVariables.playerLustCurrent + 10
 		%"lust-text".text = "Lust: " + str(ClassVariables.playerLustCurrent) + " / " + str(ClassVariables.playerLustMax)
-		%"context-text".text = "You wonder out loud if it’d be useful to have stuff like this at home… You don’t really have much experience yet, and it might be nice to explore.
+		%"context-text".text = ""
+		var storyvar1 = "You wonder out loud if it’d be useful to have stuff like this at home… You don’t really have much experience yet, and it might be nice to explore.
 
 Smiling, wryld opens up to you
 
-“Of ‘course cutie! You’ll have to pay for things as anybody else would but you will get a discount naturally since you work here. And… You’re more than right! It’s okay to take time and explore yourself, healthy even for a growing little cutie like you. Besides, if you need any help or demonstrations you can always come to me~ Not to brag but… I’m kind of an expert!”
+[center][img]res://addons/sprites/Wyrld-1.png[/img]
+
+“Of ‘course cutie! You’ll have to pay for things as anybody else would but you will get a discount naturally since you work here. And… You’re more than right! It’s okay to take time and explore yourself, healthy even for a growing little cutie like you. Besides, if you need any help or demonstrations you can always come to me~ Not to brag but… I’m kind of an expert!”[/center]
 
 There’s a proud look to her as she talks to you, she really is an expert – why else would she open a business like this? You wonder if you might be able to take her up on that offer later. For now, you get back to the task at hand.
 
 + 10 Lust"
+		%"context-text".append_text(str(storyvar1))
 	%"lust-text".text = "Lust: " + str(ClassVariables.playerLustCurrent) + " / " + str(ClassVariables.playerLustMax)
 	return ClassVariables.playerLustCurrent
 
@@ -67,11 +79,15 @@ There’s a proud look to her as she talks to you, she really is an expert – w
 func _on_floor_11_pressed() -> void:
 	%"floor-grid-1".hide()
 	%"floor-grid-2".show()
-	%"context-text".text = "You protest, denying any sort of lewd thoughts! Wyld laughs a little, but doesn’t push you any further
+	%"context-text".text = ""
+	var storyvar1 = "You protest, denying any sort of lewd thoughts! Wyld laughs a little, but doesn’t push you any further
 
-“Whatever y’say cutie! Just make sure y’ don’t go being too standoffish around the clients! Not sayin’ fuck everyone who comes in either, ‘course~”
+[center][img]res://addons/sprites/Wyrld-1.png[/img]
+
+“Whatever y’say cutie! Just make sure y’ don’t go being too standoffish around the clients! Not sayin’ fuck everyone who comes in either, ‘course~”[/center]
 
 Respectfully you nod, what she’s saying makes sense. You push away any embarrasing thoughts cropping to the top of your mind and begin to unpack…"
+	%"context-text".append_text(str(storyvar1))
 
 func _on_floor_12_pressed() -> void:
 	%"floor-grid-1".hide()

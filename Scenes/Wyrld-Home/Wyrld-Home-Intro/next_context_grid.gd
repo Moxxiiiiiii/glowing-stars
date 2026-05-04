@@ -18,7 +18,7 @@ He smiles, taking a seat down next to you. Despite his gorgeous looks, his perso
 You wish him a good morning too with a smile and polite nod. Seems like it was perfect timing too as Wyrld comes over and serves a traditional big breakfast spread in the center of the table, plates adorned with little engravings that seem to have lasted generations line the three spots laid out before your arrival – leaving it up to you and the others to grab what’s on offer.
 
 [center][img]res://addons/sprites/Wyrld-1.png[/img]
-“Dig in everyone! We have a big day today, so I made this food with a little extra love~”.[/center]
+“Dig in everyone! We have a big day today, so I made this food with a little extra love”.[/center]
 
 With her line of work, it’s a little worrying when she says things like this, but she’s right. The store had a major renevation, closing her business down for some time. It’s a popular spot, so setting up and preparing for today’s work is going to be a tall order, not to mention all the regulars waiting to step in and see the new changes.
 
@@ -27,7 +27,7 @@ The smell and sights, let alone the taste of the food is divine enough to make y
 [center][img]res://addons/sprites/Wyrld-1.png[/img]
 “Oh quit flatterin’ me you lil’ doll! You might not think so kindly of me when I put you to work today~”[/center]"
 	var storyvar2 = storyvar1.replace("{playerName}", ClassVariables.playerName)
-	%"context-text".append_text(storyvar2)
+	%"context-text".append_text(str(storyvar2))
 
 func update_clothes():
 	ClassVariables.playerBody = "Comfortable Shirt"

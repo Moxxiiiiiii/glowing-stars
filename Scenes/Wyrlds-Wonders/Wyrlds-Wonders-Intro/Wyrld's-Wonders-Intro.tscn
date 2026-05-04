@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bxcisyj3b8rx6"]
 
-[ext_resource type="Script" uid="uid://d3lvx7x431lsh" path="res://Scenes/Wyrlds-Wonders/Wyrlds-Wonders-Intro/player_icon.gd" id="1_4qi0y"]
+[ext_resource type="Script" uid="uid://y2180r6kfexn" path="res://Global/player_icon.gd" id="1_8k4n5"]
 [ext_resource type="Script" uid="uid://d2ivr5n07vxj5" path="res://hsl_organise.gd" id="1_pcjud"]
 [ext_resource type="FontFile" uid="uid://gvqts36wjulv" path="res://addons/fonts/conthrax/Conthrax-SemiBold.otf" id="1_ytwnm"]
 [ext_resource type="Texture2D" uid="uid://dvcqswj360eiw" path="res://addons/sprites/player-icon-Equine.png" id="2_8k4n5"]
@@ -191,7 +191,7 @@ custom_minimum_size = Vector2(0, 225)
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_feb5d")
-script = ExtResource("1_4qi0y")
+script = ExtResource("1_8k4n5")
 
 [node name="PlayerIconEquine" type="Sprite2D" parent="Background/MarginContainer/GridContainer/left-side/Stats and Info/player-icon" unique_id=163682811]
 unique_name_in_owner = true
