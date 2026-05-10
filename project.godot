@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 [autoload]
 
 ClassVariables="*uid://cuo4txg3h5w82"
+Inventory="*uid://b882yjss772tx"
 
 [display]
 

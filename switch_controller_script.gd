@@ -14,8 +14,15 @@ extends Node
 @onready var character_overview_right: GridContainer = %"character-overview-right"
 @onready var character_overview_left: GridContainer = %"character-overview-left"
 
-## Define Functions for Signals
+## Define meta functions
+func array_to_string_inventory(arr:Array) -> String:
+	var newString = ""
+	for i in arr:
+		newString += String(i) + "\n"
+		Inventory.playerInventoryList = "\n" + newString
+	return Inventory.playerInventoryList
 
+## Define Functions for Display
 func display_character_overview():
 	
 	%"character-overview-text".append_text("[center][font_size=48][color=#93edb1][outline_color=#000000][outline_size=4]Character Overview[/outline_size][/outline_color][/color][/font_size][/center]")
@@ -72,7 +79,9 @@ func display_equipment_stats():
 	%"equipment-stats-text".append_text("[center][color=#93edb1][outline_color=#000000][outline_size=4][font_size=48]Equipment Stats[/font_size][/outline_size][/outline_color][/color][/center]")
 
 func display_all_items():
+	##array_to_string_inventory(Inventory.playerInventoryItems)
 	%"all-items".append_text("[center][color=#93edb1][outline_color=#000000][outline_size=4][font_size=48]Items[/font_size][/outline_size][/outline_color][/color][/center]")
+	%"all-items".append_text(Inventory.playerInventoryList)
 
 ## Signals
 func _on_overview_8_pressed() -> void:

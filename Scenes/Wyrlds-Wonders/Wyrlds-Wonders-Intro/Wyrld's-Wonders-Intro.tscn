@@ -1528,6 +1528,31 @@ custom_minimum_size = Vector2(0, 225)
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_mfdv2")
+script = ExtResource("1_8k4n5")
+
+[node name="PlayerIconEquine-inv" type="Sprite2D" parent="Inventory/Background/MarginContainer/GridContainer/left-side/Stats and Info/player-icon" unique_id=1507521414]
+unique_name_in_owner = true
+visible = false
+position = Vector2(174.5, 112)
+texture = ExtResource("2_8k4n5")
+
+[node name="PlayerIconFelynx-inv" type="Sprite2D" parent="Inventory/Background/MarginContainer/GridContainer/left-side/Stats and Info/player-icon" unique_id=2056908644]
+unique_name_in_owner = true
+visible = false
+position = Vector2(175.5, 113)
+texture = ExtResource("3_csbqf")
+
+[node name="PlayerIconVulpynx-inv" type="Sprite2D" parent="Inventory/Background/MarginContainer/GridContainer/left-side/Stats and Info/player-icon" unique_id=1923701061]
+unique_name_in_owner = true
+visible = false
+position = Vector2(176.5, 112)
+texture = ExtResource("4_3ax6n")
+
+[node name="PlayerIconSprite-inv" type="Sprite2D" parent="Inventory/Background/MarginContainer/GridContainer/left-side/Stats and Info/player-icon" unique_id=621664124]
+unique_name_in_owner = true
+visible = false
+position = Vector2(176.5, 112)
+texture = ExtResource("5_u6dog")
 
 [node name="stat-block" type="PanelContainer" parent="Inventory/Background/MarginContainer/GridContainer/left-side/Stats and Info" unique_id=1825549492]
 custom_minimum_size = Vector2(0, 680)

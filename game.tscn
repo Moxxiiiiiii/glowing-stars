@@ -102,18 +102,26 @@ corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_215e1"]
-bg_color = Color(0.91764706, 0.8392157, 0.78431374, 1)
+bg_color = Color(0.4627451, 0.015686275, 0.23529412, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lfv3a"]
 bg_color = Color(0.91764706, 0.8392157, 0.78431374, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
 border_color = Color(0.4627451, 0.015686275, 0.23529412, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_80cx4"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.91764706, 0.8392157, 0.78431374, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7sc4i"]
-bg_color = Color(0.4769836, 0.7670783, 0.8856455, 1)
+bg_color = Color(0.91764706, 0.8392157, 0.78431374, 1)
 
 [sub_resource type="GDScript" id="GDScript_mwb40"]
 script/source = "extends Node
@@ -597,10 +605,36 @@ size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_hve3p")
 
 [node name="player-icon" type="Panel" parent="Inventory/Background/MarginContainer/left-side/Stats and Info" unique_id=1164189848]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 225)
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_mfdv2")
+script = ExtResource("1_7sc4i")
+
+[node name="PlayerIconEquine-inv" type="Sprite2D" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/player-icon" unique_id=2076923381]
+unique_name_in_owner = true
+visible = false
+position = Vector2(174.5, 112)
+texture = ExtResource("2_80cx4")
+
+[node name="PlayerIconFelynx-inv" type="Sprite2D" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/player-icon" unique_id=1355130808]
+unique_name_in_owner = true
+visible = false
+position = Vector2(175.5, 113)
+texture = ExtResource("3_e8heu")
+
+[node name="PlayerIconVulpynx-inv" type="Sprite2D" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/player-icon" unique_id=2094474934]
+unique_name_in_owner = true
+visible = false
+position = Vector2(176.5, 112)
+texture = ExtResource("4_rvswv")
+
+[node name="PlayerIconSprite-inv" type="Sprite2D" parent="Inventory/Background/MarginContainer/left-side/Stats and Info/player-icon" unique_id=649873068]
+unique_name_in_owner = true
+visible = false
+position = Vector2(176.5, 112)
+texture = ExtResource("5_boyg6")
 
 [node name="stat-block" type="PanelContainer" parent="Inventory/Background/MarginContainer/left-side/Stats and Info" unique_id=1825549492]
 custom_minimum_size = Vector2(0, 680)
@@ -854,6 +888,9 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_215e1")
 
+[node name="inventory-script" type="Node" parent="Inventory/Background/MarginContainer/right-side/Game info/MarginContainer/context-box" unique_id=1217799884]
+script = ExtResource("1_7sc4i")
+
 [node name="inventory-main" type="HBoxContainer" parent="Inventory/Background/MarginContainer/right-side/Game info/MarginContainer/context-box" unique_id=500158538]
 layout_mode = 1
 anchors_preset = 15
@@ -872,7 +909,13 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("3_j5wjh")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_lfv3a")
 bbcode_enabled = true
 script = ExtResource("3_7jktm")
@@ -882,7 +925,13 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("3_j5wjh")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_lfv3a")
 bbcode_enabled = true
 script = ExtResource("4_ryrav")
@@ -892,14 +941,33 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="all-items" type="RichTextLabel" parent="Inventory/Background/MarginContainer/right-side/Game info/MarginContainer/context-box/inventory-main/inventory-right" unique_id=252888748]
+[node name="PanelContainer" type="PanelContainer" parent="Inventory/Background/MarginContainer/right-side/Game info/MarginContainer/context-box/inventory-main/inventory-right" unique_id=1012427052]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_80cx4")
+
+[node name="inventory-items" type="VBoxContainer" parent="Inventory/Background/MarginContainer/right-side/Game info/MarginContainer/context-box/inventory-main/inventory-right/PanelContainer" unique_id=1769110740]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="all-items" type="RichTextLabel" parent="Inventory/Background/MarginContainer/right-side/Game info/MarginContainer/context-box/inventory-main/inventory-right/PanelContainer/inventory-items" unique_id=252888748]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("3_j5wjh")
-theme_override_styles/normal = SubResource("StyleBoxFlat_lfv3a")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 30
 bbcode_enabled = true
+fit_content = true
+horizontal_alignment = 1
 script = ExtResource("5_eow3j")
 
 [node name="character-overview-left" type="GridContainer" parent="Inventory/Background/MarginContainer/right-side/Game info/MarginContainer/context-box/inventory-main" unique_id=1739894588]
@@ -1141,5 +1209,6 @@ script = SubResource("GDScript_mwb40")
 
 [connection signal="pressed" from="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise/inventory-button" to="Background/MarginContainer/GridContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise/inventory-button" method="_on_pressed"]
 [connection signal="pressed" from="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise/inventory-button" to="Inventory/Background/MarginContainer/left-side/Stats and Info/stat-block/stat-grid/stat-panel/stat-container/inventory-box/inventory-organise/inventory-button" method="_on_pressed"]
+[connection signal="mouse_entered" from="Inventory/Background/MarginContainer/right-side/Game info/MarginContainer/context-box/inventory-main/inventory-right/PanelContainer/inventory-items/all-items" to="." method="_on_allitems_mouse_entered"]
 [connection signal="pressed" from="Inventory/Background/MarginContainer/right-side/Choices/decision-box/choice-grid/choice8" to="Inventory/Background/MarginContainer/right-side/switch-controller-script" method="_on_choice_8_pressed"]
 [connection signal="pressed" from="Inventory/Background/MarginContainer/right-side/Choices/decision-box/overview-grid/overview8" to="Inventory/Background/MarginContainer/right-side/switch-controller-script" method="_on_overview_8_pressed"]
